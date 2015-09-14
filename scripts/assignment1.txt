@@ -1,0 +1,13 @@
+Adding text in vim: i (insert on the line you're at) or o (insert mode into the next
+line). You can also use capital i and o. 
+
+:w saves the file
+:q closes vim
+
+.vimrc: 
+:syntax on
+:set expandtab
+:command W w
+:command WQ wq
+:command Wq wq
+
