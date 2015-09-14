@@ -39,12 +39,11 @@ In this exercise you should write a script that can:
   local laptop
 - compile all the java files in the JSON directory to a classes/
   directory 
-- make a zip file of the classes directory
+- make a jar file of the classes directory
 - ssh into the box using the login information given in the workshop
-- upload your zip file
-- unzip the uploaded file into a directory (use your name for directory like so:
-  siv_hollup or eirik_aardal)
-- print out log information after compiling, uploading and unzipping
+- upload your jar file
+- print out log information after compiling and uploading
+
 
 Done with time to spare?
 Try to make your deploy-script use parameters with getopts! 
@@ -52,8 +51,11 @@ Try to make your deploy-script use parameters with getopts!
     -d cleans the build, that is deletes all compiled classes and the directory
     they've been put in
     -c compiles all java source files in a classes directory
-    -z zip all class files
-    -u upload zip file to remote location and unzip
+    -j make a jar of all class files
+    -u upload jar file to remote location
+When you run the script it should look like this (when you invoke all the steps): 
+bash myscript.sh -dcju
+
 
 Still want more? 
 Use the JSON java directory that you downloaded in the earlier exercises. 
