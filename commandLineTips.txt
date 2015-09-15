@@ -1,7 +1,8 @@
 You'll need something that gives you a bash-like shell. If you're using a *nix
 system or OSX you'll be fine, if you're using Windows you can for instance
 download git and use the shell that comes with it (http://git-scm.com/downloads
-Remember to opt in for Git Bash when installing). 
+Remember to opt in for Git Bash when installing). Other Windows alternatives are 
+Cygwin (https://www.cygwin.com/) and Gow (https://github.com/bmatzelle/gow), which is more lightweight than Cygwin.
 
 Some useful tools and a short intro to what they do: 
 1) Navigation
