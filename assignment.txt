@@ -15,7 +15,8 @@ Exercise 2: Basics of the shell
 - Print the path to the current working directory
 - List the hidden files (if any) in a directory
 - List all java files in a directory with human-readable size references ordered
-  by the last-modified date
+  by the last-modified date. If you don't have any java files, try another type
+  of files, preferable text files. 
 - Find your java executable
 - Use a for loop to print out the first few lines of each file in a directory
 - Try to do the previous task both as a script and as a one-liner in the shell
