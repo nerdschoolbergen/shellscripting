@@ -8,7 +8,7 @@
 - Close `vim`
 - Make your own `.vimrc` file by editing it in `vim`. You should include syntax
   highlighting and convert tabs to spaces
-- make an alias so that `WQ` and `Wq` behave like the `wq` command
+- Make an alias so that `WQ` and `Wq` behave like the `wq` command
 
 # Exercise 2: Basics of the shell
 - List the contents of the directory you are currently standing in
@@ -20,9 +20,9 @@
 - Find your java executable
 - Use a for loop to print out the first few lines of each file in a directory
 - Try to do the previous task both as a script and as a one-liner in the shell
-- Make a variable containing the name of a directory. Make a test that checks
-  whether the name is a directory or a regular file. Print out the line "This is
-  a directory" if the variable names a directory. This time, print out the name of
+- Make a variable containing the name of a directory. 
+  - Make a test that checks whether the name is a directory or a regular file.
+  - Print out the line "This is a directory" if the variable names a directory. This time, print out the name of
   the directory using the variable so that the line reads "commandLineTips.txt
   is not a directory"
 - List out files in `/var/log/` and listen to the tail end of the most recently
@@ -35,19 +35,19 @@
 We've set up a box on Amazon Web Services that you can use for this exercise.
 
 In this exercise you should write a script that can:
-- execute with `./script.sh` rather than `bash script.sh`
+- Execute with `./script.sh` rather than `bash script.sh`
 - make sure you're in the same directory as your script is in (test this by
   executing the script from other directories and print the current working
   directory before and after the command)
-- download the files in https://github.com/douglascrockford/JSON-java to your
+- Download the files in https://github.com/douglascrockford/JSON-java to your
   local laptop
-- compile all the java files in the JSON directory to a classes/
-  directory 
-- make a jar file of the classes directory
-- upload your jar file using a secure copying method (login information and
+- Compile all the java files in the JSON directory to a `classes/`
+  directory
+- Make a JAR file of the classes directory
+- Upload your JAR file using a secure copying method (login information and
   address will be listed) 
-- SSH into the box and list your jar file so that you can see it's there.
-- print out some log messages after compiling and uploading
+- SSH into the box and list your JAR file so that you can see it's there.
+- Print out some log messages after compiling and uploading
 
 # Done with time to spare?
 Try to make your deploy-script use parameters with `getopt`s! 
