@@ -20,7 +20,8 @@ You'll need something that gives you a bash-like shell. If you're using a *nix s
 - Cygwin: https://www.cygwin.com/
 - Gow: https://github.com/bmatzelle/gow - More lightweight than Cygwin
 
-Some useful tools and a short intro to what they do: 
+Some useful tools and a short intro to what they do:
+
 - [1. Navigation](#1-navigation)
 - [2. Getting an overview](#2-getting-an-overview)
 - [3. Files and directories](#3-files-and-directories)
@@ -29,7 +30,8 @@ Some useful tools and a short intro to what they do:
 - [6. Remote access](#6-remote-access)
 - [7. How do I get help?](#7-how-do-i-get-help)
 - [8. Nice to know about systems](#8-nice-to-know-about-systems)
-- [9. Scripting](#-9-scripting)
+- [9. Scripting](#9-scripting)
+
 ## 1. Navigation
 - `ls`: what's in this directory? ("list")
 - `pwd` : where am I standing in the file system? ("print working directory")
