@@ -57,7 +57,7 @@ Try to make your deploy-script use parameters with `getopt`s!
   - `-j` make a jar of all class files
   - `-u` upload jar file to remote location
   - `-h` display usage
-When you run the script it should look like this (when you invoke all the steps): 
+- When you run the script it should look like this (when you invoke all the steps): 
 `bash myscript.sh -dcju`
 
 # Still want more? 
