@@ -1,16 +1,16 @@
-Hottest tip: Google is your friend.
+>Hottest tip: Google is your friend.
 
-Exercise 1: Using a text editor in the terminal
-- Open vi or vim from the terminal
+# Exercise 1: Using a text editor in the terminal
+- Open `vi` or `vim` from the terminal
 - Add some text
 - Save the file
 - Turn on syntax highlighting in the text editor
-- Close vim
-- Make your own .vimrc file by editing it in vim. You should include syntax
+- Close `vim`
+- Make your own `.vimrc` file by editing it in `vim`. You should include syntax
   highlighting and convert tabs to spaces
-- make an alias so that WQ and Wq behave like the wq command
+- make an alias so that `WQ` and `Wq` behave like the `wq` command
 
-Exercise 2: Basics of the shell
+# Exercise 2: Basics of the shell
 - List the contents of the directory you are currently standing in
 - Print the path to the current working directory
 - List the hidden files (if any) in a directory
@@ -25,16 +25,17 @@ Exercise 2: Basics of the shell
   a directory" if the variable names a directory. This time, print out the name of
   the directory using the variable so that the line reads "commandLineTips.txt
   is not a directory"
-- List out files in /var/log/ and listen to the tail end of the most recently
+- List out files in `/var/log/` and listen to the tail end of the most recently
   used log file. This means that any new messages should appear in your
   terminal (this may take a few minutes depending on the activity level of your
   machine). How do you exit from the live view of the file?
 
 
-Exercise 3: deploy via a script 
-We've set up a box on the amazon cloud that you can use for this exercise.
+# Exercise 3: deploy via a script 
+We've set up a box on Amazon Web Services that you can use for this exercise.
+
 In this exercise you should write a script that can:
-- execute with ./script.sh rather than bash script.sh
+- execute with `./script.sh` rather than `bash script.sh`
 - make sure you're in the same directory as your script is in (test this by
   executing the script from other directories and print the current working
   directory before and after the command)
@@ -45,24 +46,23 @@ In this exercise you should write a script that can:
 - make a jar file of the classes directory
 - upload your jar file using a secure copying method (login information and
   address will be listed) 
-- ssh into the box and list your jar file so that you can see it's there.
+- SSH into the box and list your jar file so that you can see it's there.
 - print out some log messages after compiling and uploading
 
-
-Done with time to spare?
-Try to make your deploy-script use parameters with getopts! 
+# Done with time to spare?
+Try to make your deploy-script use parameters with `getopt`s! 
 - the parameters and their uses are: 
-    -d cleans the build, that is deletes all compiled classes and the directory
+    `-d` cleans the build, that is deletes all compiled classes and the directory
     they've been put in
-    -c compiles all java source files in a classes directory
-    -j make a jar of all class files
-    -u upload jar file to remote location
-    -h display usage
+    `-c` compiles all java source files in a classes directory
+    `-j` make a jar of all class files
+    `-u` upload jar file to remote location
+    `-h` display usage
 When you run the script it should look like this (when you invoke all the steps): 
 bash myscript.sh -dcju
 
 
-Still want more? 
+# Still want more? 
 Use the JSON java directory that you downloaded in the earlier exercises. 
 - Try to extract all the lines that define public functions from the code files. Can
   you exclude class names?
@@ -70,12 +70,16 @@ Use the JSON java directory that you downloaded in the earlier exercises.
   you're in. For each file, it should extract the function names and put the
   result into a new file (all the function names from all files into one file)
 - Make your bash script directly executable so that you only have to type
-  "./myScript.sh" rather than "bash myscript.sh"
+  `./myScript.sh` rather than `bash myscript.sh`
 - Try to remove everything but the function names from each line. Example:
+    ```
     public void removePrefixOfFunctionName(String line) {
+    ```
   would become
-removePrefixOfFunctionName(String line)
+    ```
+    removePrefixOfFunctionName(String line)
+    ```
   or even just
-removePrefixOfFunctionName
-
-
+    ```
+    removePrefixOfFunctionName
+    ```
