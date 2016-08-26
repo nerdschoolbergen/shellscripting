@@ -72,15 +72,18 @@ Use the JSON java directory that you downloaded in the earlier exercises.
   `./myScript.sh` rather than `bash myscript.sh`
 - Try to remove everything but the function names from each line. Example:
 
-    ```
-    public void removePrefixOfFunctionName(String line) {
-    ```
+  ```
+  public void removePrefixOfFunctionName(String line) {
+  ```
     
   would become
-    ```
-    removePrefixOfFunctionName(String line)
-    ```
+  
+  ```
+  removePrefixOfFunctionName(String line)
+  ```
+  
   or even just
-    ```
-    removePrefixOfFunctionName
-    ```
+  
+  ```
+  removePrefixOfFunctionName
+  ```
