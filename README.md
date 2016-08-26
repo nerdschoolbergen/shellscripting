@@ -1,4 +1,6 @@
 # Shell scripting
+<img src="http://haacked.com/images/icons/Shell.ico" width="128" />
+
 The CLI (Command-line interface) is a developer's friend and power tool. Learn some of the most
 important commands and see how the CLI can supercharge your workday.
 
