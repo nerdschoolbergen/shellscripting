@@ -6,8 +6,8 @@ important commands and see how the CLI can supercharge your workday.
 
 The goal is to produce a simple deployment script. 
 
-This repository contains a link to some slides with a quick introduction to the CLI,
-files with some tips on useful tools and the assignment itself. Happy hacking!
+This repository contains a link to a Google Presentation with a quick introduction to the CLI,
+some tips on useful tools and the assignment itself. Happy hacking!
 
 # Assignment
 
