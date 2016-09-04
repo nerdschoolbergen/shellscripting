@@ -29,7 +29,8 @@
   used log file. This means that any new messages should appear in your
   terminal (this may take a few minutes depending on the activity level of your
   machine). How do you exit from the live view of the file?
-
+- List the contents of your PATH variable
+- Create a new directory and add this directory to your PATH variable. Verify that it was added by repeating the previous step.
 
 # Exercise 3: deploy via a script 
 We've set up a box on Amazon Web Services that you can use for this exercise.
@@ -54,10 +55,14 @@ Here is a template to get your started:
 #!/bin/bash
 #above line is the shebang which makes it executable with ./script.sh
 #make sure to set permissions so that your user can execute the file (chmod u+x)
+
 pwd
-#magic oneliner that moves you to the dir of the script file
+
+#magic oneliner that moves you to the dir of the script file:
 cd "$( dirname "${BASH_SOURCE[0]}" )"
+
 pwd
+
 # " evaulates the contents
 # ' does not evaluate the contents inbetween. Test with 
 #param=hey
