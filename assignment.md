@@ -5,11 +5,10 @@
 - If you've never seen vim before, doing step 1-9 in [this interactive tutorial](http://www.openvim.com/) is a good place to start. Won't take long!
 - Add some text
 - Save the file
-- Turn on syntax highlighting in the text editor
 - Close `vim`
-- Make your own `.vimrc` file by editing it in `vim`. You should include syntax
-  highlighting and convert tabs to spaces
-- Make an alias so that `WQ` and `Wq` behave like the `wq` command
+- Make your own `.vimrc` file by editing it in `vim`:
+  - You should convert tabs to spaces
+  - Make an alias so that `WQ` and `Wq` behave like the `wq` command
 
 # Exercise 2: Basics of the shell
 - List the contents of the directory you are currently standing in
