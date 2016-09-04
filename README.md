@@ -1,6 +1,10 @@
 # Shell scripting
 <img src="http://haacked.com/images/icons/Shell.ico" width="128" />
 
+### <a href="https://drive.google.com/open?id=1f36I6_qXTvnwe3nBV4l4eGs9m-Z8u8Yp0Rzg0TitixY" target="_blank">Open presentation in Google Docs</a>
+
+<hr/>
+
 The CLI (Command-line interface) is a developer's friend and power tool. Learn some of the most
 important commands and see how the CLI can supercharge your workday.
 
