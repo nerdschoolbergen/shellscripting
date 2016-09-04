@@ -2,6 +2,7 @@
 
 # Exercise 1: Using a text editor in the terminal
 - Open `vi` or `vim` from the terminal
+- If you've never seen vim before, doing step 1-9 in [this interactive tutorial](http://www.openvim.com/) is a good place to start. Won't take long!
 - Add some text
 - Save the file
 - Turn on syntax highlighting in the text editor
