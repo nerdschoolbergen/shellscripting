@@ -2,7 +2,8 @@
 
 # Exercise 1: Using a text editor in the terminal
 - Open `vi` or `vim` from the terminal
-- If you've never seen vim before, doing step 1-9 in [this interactive tutorial](http://www.openvim.com/) is a good place to start. Won't take long!
+  - If you've never seen vim before, doing step 1-9 in [this interactive tutorial](http://www.openvim.com/) is a good place to start. Won't take long!
+  - [This vim cheat sheet may be useful](http://vim.rtorr.com/)
 - Add some text
 - Save the file
 - Close `vim`
