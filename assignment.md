@@ -1,4 +1,4 @@
->Hottest tip: Google is your friend.
+> Hottest tip: Google is your friend.
 
 # Exercise 1: Using a text editor in the terminal
 - Open `vi` or `vim` from the terminal
@@ -13,13 +13,13 @@
 # Exercise 2: Basics of the shell
 - List the contents of the directory you are currently standing in
 - Print the path to the current working directory
-- List the hidden files (if any) in a directory
+- List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
 - List all java files in a directory with human-readable size references ordered
   by the last-modified date. If you don't have any java files, try another type
-  of files, preferable text files. 
-- Find your java executable
-- Use a for loop to print out the first few lines of each file in a directory
-- Try to do the previous task both as a script and as a one-liner in the shell
+  of files, preferable text files. (Hint: see the help documentation for the `ls` command's `l`, `t`, `r`, and `h` switches)
+- Find your java executable. If you don't have Java installed, try any other well known executable on your machine.
+- Use a for loop to print out the first few lines of each file in a directory.
+  - Try to do this both as a script and as a one-liner in the shell
 - Make a variable containing the name of a directory. 
   - Make a test that checks whether the name is a directory or a regular file.
   - Print out the line "This is a directory" if the variable names a directory. This time, print out the name of
@@ -48,6 +48,33 @@ In this exercise you should write a script that can:
   address will be listed) 
 - SSH into the box and list your JAR file so that you can see it's there.
 - Print out some log messages after compiling and uploading
+
+Here is a template to get your started:
+```
+#!/bin/bash
+#above line is the shebang which makes it executable with ./script.sh
+#make sure to set permissions so that your user can execute the file (chmod u+x)
+pwd
+#magic oneliner that moves you to the dir of the script file
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+pwd
+# " evaulates the contents
+# ' does not evaluate the contents inbetween. Test with 
+#param=hey
+#echo "$param"
+#echo '$param'
+
+#1. git clone the repository in the assigment
+#2. create a new directory to put compile into
+#3. compile all .java files into the newly created dir
+#4. write some progress to the console
+#5. write the contents of the new dir to the console
+#6. make a JAR file out of the compiled code
+#7. write some progress to the console
+#8. securely upload the JAR to the remote box
+#9. write some progress to the console
+#10. securely login to the remote box and verify that the JAR file is there
+```
 
 # Done with time to spare?
 Try to make your deploy-script use parameters with `getopt`s! 
