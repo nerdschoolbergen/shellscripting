@@ -1,5 +1,12 @@
-# Done with time to spare?
-Try to make your deploy-script use parameters with `getopt`s! 
+# Bonus Exercise 1 - Done with time to spare?
+
+You will learn to:
+
+  - Use parameters in your script
+
+## 1.1 Parameters
+
+:book: Try to make your deploy-script use parameters with `getopt`s! 
 - the parameters and their uses are: 
   - `-d` cleans the build, that is deletes all compiled classes and the directory they've been put in
   - `-c` compiles all java source files in a classes directory
