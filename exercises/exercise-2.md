@@ -13,12 +13,10 @@ You will learn to:
 :pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
 
 :pencil2: List all java files in a directory with human-readable size references ordered
-  by the last-modified date. 
-
+  by the last-modified date.         
 :exclamation: If you don't have any java files, try another type of files, preferable text files. (Hint: see the help documentation for the `ls` command's `l`, `t`, `r`, and `h` switches)
 
-:pencil2: Find your java executable. 
-
+:pencil2: Find your java executable.          
 :exclamation: If you don't have Java installed, try any other well known executable on your machine.
 
 :pencil2: Use a for loop to print out the first few lines of each file in a directory.
