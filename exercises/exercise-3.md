@@ -1,11 +1,12 @@
 # Exercise 3 - Deploy via a script 
 
+:book: In this exercise you will write a script that will upload a JAR file with compiled java files to an existing box on Amazon Web Services.
+
 You will learn to:
 
   - Create your own script with functionality
  
 ## 3.1 Create your script
-:book: In this exercise you will write a script that will upload a JAR file with compiled java files to an existing box on Amazon Web Services.
 
 :exclamation: Again, remember: Google is always your friend!
 
