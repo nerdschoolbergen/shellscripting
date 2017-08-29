@@ -32,8 +32,7 @@ You will learn to:
   used log file. 
   
 This means that any new messages should appear in your terminal (this may take a few minutes depending on the activity level of your
-  machine). 
-  
+  machine).               
 :question: How do you exit from the live view of the file?
 
 :pencil2: List the contents of your PATH variable
