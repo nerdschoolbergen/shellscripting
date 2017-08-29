@@ -1,22 +1,34 @@
-# Exercise 3: Deploy via a script 
-We've set up a box on Amazon Web Services that you can use for this exercise.
+# Exercise 3 - Deploy via a script 
 
-In this exercise you should write a script that can:
-- Execute with `./script.sh` rather than `bash script.sh`
-- make sure you're in the same directory as your script is in (test this by
-  executing the script from other directories and print the current working
-  directory before and after the command)
-- Download the files in https://github.com/douglascrockford/JSON-java to your
-  local laptop
-- Compile all the java files in the JSON directory to a `classes/`
-  directory
-- Make a JAR file of the classes directory
-- Upload your JAR file using a secure copying method (login information and
-  address will be listed) 
-- SSH into the box and list your JAR file so that you can see it's there.
-- Print out some log messages after compiling and uploading
+You will learn to:
 
-Here is a template to get your started:
+  - Create your own script with functionality
+ 
+## 3.1 Create your script
+:book: In this exercise you will write a script that will upload a JAR file with compiled java files to an existing box on Amazon Web Services.
+
+:exclamation: Again, remember: Google is always your friend!
+
+:pencil2: Create a script that executes with `./script.sh` rather than `bash script.sh`.
+
+:book: The following list specifies what kind of functionality your script should have. 
+
+:pencil2: Make sure you're in the same directory as your script is in.
+  - Test this by executing the script from other directories and print the current working
+  directory before and after the command.
+  
+:pencil2: Download the files in https://github.com/douglascrockford/JSON-java to your
+  local laptop<br/>
+:pencil2: Compile all the java files in the JSON directory to a `classes/`
+  directory<br/>
+:pencil2: Make a JAR file of the classes directory<br/>
+:pencil2: Upload your JAR file using a secure copying method (login information and
+  address will be listed in the presentation) <br/>
+:pencil2: SSH into the box and list your JAR file so that you can see it's there.<br/>
+:pencil2: Print out some log messages after compiling and uploading
+
+:book: Here is a template to get your started:
+
 ```
 #!/bin/bash
 #above line is the shebang which makes it executable with ./script.sh
@@ -46,4 +58,5 @@ pwd
 #9. write some progress to the console
 #10. securely login to the remote box and verify that the JAR file is there
 ```
+
 ### [Go to bonus exercise 1 :arrow_right:](./bonus-1.md)
