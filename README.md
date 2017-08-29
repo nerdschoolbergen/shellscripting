@@ -1,9 +1,7 @@
-# Shell scripting
 <img src="http://haacked.com/images/icons/Shell.ico" width="128" />
 
-### <a href="https://drive.google.com/open?id=1f36I6_qXTvnwe3nBV4l4eGs9m-Z8u8Yp0Rzg0TitixY" target="_blank">Open presentation in Google Docs</a>
 
-<hr/>
+# Shell scripting
 
 The CLI (Command-line interface) is a developer's friend and power tool. Learn some of the most
 important commands and see how the CLI can supercharge your workday.
@@ -11,20 +9,39 @@ important commands and see how the CLI can supercharge your workday.
 The goal is to produce a simple deployment script. 
 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
-some tips on useful tools and the assignment itself. Happy hacking!
+some tips on useful tools and exercises. Happy hacking!
 
-# Assignment
+## [Open presentation slides](https://drive.google.com/open?id=1f36I6_qXTvnwe3nBV4l4eGs9m-Z8u8Yp0Rzg0TitixY)
 
-See [assignment.md](assignment.md)
-
-# Tips
+## What you need
 
 You'll need something that gives you a bash-like shell. If you're using a *nix system or OS X you'll be fine, if you're using Windows you can install one of the following:
-- Git for Windows: http://git-scm.com/downloads - Remember to opt in for Git Bash when installing)
-- Cygwin: https://www.cygwin.com/
-- Gow: https://github.com/bmatzelle/gow - More lightweight than Cygwin
+* Git for Windows: http://git-scm.com/downloads - Remember to opt in for Git Bash when installing)
+* Cygwin: https://www.cygwin.com/
+* Gow: https://github.com/bmatzelle/gow - More lightweight than Cygwin
 
-Some useful tools and a short intro to what they do:
+## How to get started
+
+* Although you have this `README.md` file on your computer, it's easier to read it on GitHub with formatting. We therefore recommend you keep a web browser tab open with the exercise tasks.
+* Start by opening [exercise 1](./exercises/exercise-1.md/).
+* Remember to ask an instructor if you're stuck.
+
+> :exclamation: Hottest tip: Google is your friend.
+
+
+## Exercises
+
+- [Exercise 1](./exercises/exercise-1.md/) (start here)
+- [Exercise 2](./exercises/exercise-2.md/)
+- [Exercise 3](./exercises/exercise-3.md/)
+
+### Bonus exercises
+
+- [Bonus part 1](./exercises/bonus-1.md)
+- [Bonus part 2](./exercises/bonus-2.md)
+
+
+## Helpful resources
 
 - [1. Navigation](#1-navigation)
 - [2. Getting an overview](#2-getting-an-overview)
