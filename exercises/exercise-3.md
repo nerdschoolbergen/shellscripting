@@ -1,6 +1,6 @@
 # Exercise 3 - Deploy via a script 
 
-:book: In this exercise you will write a script that will upload a JAR file with compiled java files to an existing box on Amazon Web Services.
+:book: In this exercise you will write a script that will upload a JAR file with compiled java files to an existing box on Amazon Web Services. If you don't have java installed on your computer or are having problems with compiling the java files locally, it is possible to download and compile the java files directly in the AWS box. If you want to compile the files directly in the AWS box, remember to SSH into the box before you download the files.
 
 You will learn to:
 
