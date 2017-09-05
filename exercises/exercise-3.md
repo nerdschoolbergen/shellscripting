@@ -20,8 +20,8 @@ You will learn to:
   
 :pencil2: Download the files in https://github.com/douglascrockford/JSON-java to your
   local laptop<br/>
-:pencil2: Compile all the java files in the JSON directory to a `<yourName>` directory (example: `karina/`)<br/>
-:pencil2: Make a JAR file of the `<yourName>` directory<br/>
+:pencil2: Compile all the java files in the JSON directory to a `classes/` directory (<br/>
+:pencil2: Make a JAR file of the classes directory with the name: `<yourFirstname>_<yourLastname>.jar` (example: karina_haugen.jar). Don't use spaces and æøå. <br/>
 :pencil2: Upload your JAR file using a secure copying method (login information and
   address will be listed in the presentation) <br/>
 :pencil2: SSH into the box and list your JAR file so that you can see it's there.<br/>
