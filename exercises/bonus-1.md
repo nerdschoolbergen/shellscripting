@@ -6,7 +6,7 @@ You will learn to:
 
 ## 1.1 Parameters
 
-:book: Try to make your deploy-script use parameters with `getopt`s! 
+:book: Try to make your deploy-script use parameters with `getopts`! 
 - the parameters and their uses are: 
   - `-d` cleans the build, that is deletes all compiled classes and the directory they've been put in
   - `-c` compiles all java source files in a classes directory
