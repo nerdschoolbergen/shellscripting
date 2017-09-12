@@ -6,7 +6,7 @@
 The CLI (Command-line interface) is a developer's friend and power tool. Learn some of the most
 important commands and see how the CLI can supercharge your workday.
 
-The goal is to produce a simple deployment script. 
+You'll learn some basic bash programming and produce a simple deployment script for a remote location.
 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
 some tips on useful tools and exercises. Happy hacking!
@@ -26,7 +26,7 @@ You'll need something that gives you a bash-like shell. If you're using a *nix s
 * Start by opening [exercise 1](./exercises/exercise-1.md/).
 * Remember to ask an instructor if you're stuck.
 
-> :exclamation: Hottest tip: Google is your friend.
+> :exclamation: Hottest tip: Google is your friend. You will need to google alot as you dive into the exercises! 
 
 
 ## Exercises
