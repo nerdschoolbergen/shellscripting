@@ -4,6 +4,8 @@ You will learn to:
 
 - Navigate through files and directories using a shell
 
+From here you'll need to use Google more and more to complete the tasks. You can also check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section). 
+
 ## 2.1 Files and directories
 
 :pencil2: List the contents of the directory you are currently standing in
