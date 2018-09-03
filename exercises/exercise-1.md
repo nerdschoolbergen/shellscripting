@@ -14,8 +14,8 @@ You will learn to:
 
 :pencil2: Add some text. As you've seen in the interactive tutorial, you should go from normal mode to insert mode by typing `i` before you add text. Enter normal mode again by pressing `Esc`. 
 
-:pencil2: Save the file. In normal mode, you enter commands by typing `:` followed by your command. <br/>
-:exclamation: Use google to figure out how to save your work! 
+:pencil2: Save the file. In normal mode, you enter commands by typing `:` followed by your command. Use google to figure out how to save your work! 
+
 
 :pencil2: Close `vim`
 
