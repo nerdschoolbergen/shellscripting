@@ -58,7 +58,7 @@ If you don't want to type these type of configuration commands every time you op
 
 :pencil2: Find your home directory by typing `cd` in the terminal. This takes you to the directory specified in your `$HOME` environment variable. 
 
-:pencil2: Make your own `.vimrc` file by editing it in `vim`. 
+:pencil2: Make your own `.vimrc` file by editing it in `vim`. Check out this website for example: http://vim.wikia.com/wiki/Example_vimrc
 
 :pencil2: Use Google to find out how to set up there three settings in your `.vimrc`. 
   - Syntax highlighting
