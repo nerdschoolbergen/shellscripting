@@ -1,44 +1,88 @@
-# Exercise 2 - Basics of the shell
+# Exercise 2 - Deploy via a script 
+
+:book: In this exercise you will write a script that will upload a set of files, containing a simple website to an existing server we have set up.
 
 You will learn to:
+  - Create your own script with functionality
+ 
+## 3.1 Create your script
+### 3.1.1 Copying and verifying files
 
-- Navigate through files and directories using a shell
+:exclamation: Feel free to ask for help if you are stuck or something is unclear. Also, google is your friend :-)
 
-From here you'll need to use Google more and more to complete the tasks. You can also check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section). 
+:pencil2: Create a script that executes with `./script.sh` rather than `bash script.sh`. Make sure you're in the same directory as your script is in.
+Test this by executing the script from other directories and print the current working directory before and after the command.
 
-## 2.1 Files and directories
-
-:pencil2: List the contents of the directory you are currently standing in
-
-:pencil2: Print the path to the current working directory
-
-:pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
-
-:pencil2: List all java files in a directory with human-readable size references ordered
-  by the last-modified date.         
-:exclamation: If you don't have any java files, try another type of files, preferable text files. (Hint: see the help documentation for the `ls` command's `l`, `t`, `r`, and `h` switches)
-
-:pencil2: Find your java executable.          
-:exclamation: If you don't have Java installed, try any other well known executable on your machine.
-
-:pencil2: Use a for loop to print out the first few lines of each file in a directory.
-  - Try to do this both as a script and as a one-liner in the shell
-
-:pencil2: Make a variable containing the name of a directory. 
-  - Make a test that checks whether the name is a directory or a regular file.
-  - Print out the line "This is a directory" if the variable names a directory. This time, print out the name of
-  the directory using the variable so that the line reads "commandLineTips.txt
-  is not a directory"
-
-:pencil2: List out files in `/var/log/` and listen to the tail end of the most recently
-  used log file. 
+:pencil2: Move the `website` folder in the root of this git-repository in to your working directory, where you will be creating the script.
   
-This means that any new messages should appear in your terminal (this may take a few minutes depending on the activity level of your
-  machine).               
-:question: How do you exit from the live view of the file?
+__Your script should execute the following steps in order to deploy a single website to a server__
 
-:pencil2: List the contents of your PATH variable
+:pencil2: Upload all the files using a secure copying method (login information and address will be listed in the presentation) to a folder with your name on the server (See `REMOTE_FOLDER` in the template below).
+  
+:pencil2: SSH into the server and verify that the files are there (It might be enough to check if the `index.html` file is present).
 
-:pencil2: Create a new directory and add this directory to your PATH variable. Verify that it was added by repeating the previous step.
+:pencil2: Print out some log messages after each step in your script.
 
-### [Go to exercise 3 :arrow_right:](./exercise-3.md)
+:book: Here is a template to get your started:
+
+```bash
+#!/bin/bash
+# - The above line is called "the shebang", and tells the shell what program to interpret the script with, when executed.
+# - Make sure to set permissions so that your user can execute the file (chmod u+x)
+
+# This is a magic oneliner that moves you to the dir of the script file:
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
+# Change the NAME variable to your name.
+NAME="YourName"
+REMOTE_FOLDER="/var/www/$NAME/"
+
+# " evaulates the contents
+# ' does not evaluate the contents inbetween. Test with 
+# param=hey
+# echo "$param"
+# echo '$param'
+
+# 1. Securely upload the folder to the remote remote server (to the REMOTE_FOLDER location)
+# 2. Securely login to the remote remote and verify that the index.html file is present in your REMOTE_FOLDER
+```
+
+
+
+### 3.1.2 Save backups
+
+If you run the script several times, you will try to copy files to an existing location. What we can do to fix this, is to create a mechanism for backing up the old files before deploying the new files. 
+
+:pencil2: Before you copy the files to the server, move the existing files on the server to the `/var/backup/<YourName>` folder, and give it a descriptive name (e.g. containing the date and time of the backup).
+
+You might end up with something like this `/var/backup/Marius/backup_
+
+When you upload the folder with your HTML-files, create a copy of the folder to the `/var/releases` folder, and give it a descriptive name (such as a name containing the date and the release number - E.g. `release-081819-1`, with end result: `/var/releases/<yourname>/release-081819-1`). You now have a set of previously released artifacts on the server.
+
+
+## :star: Bonus tasks for this exercise (optional)
+If you enjoyed working with this exercise, there is a lot more you can add to the script. Here are some suggestions, but you can add any feature you like (**Show us if you do something cool**).
+
+
+## 3.2.1 Cloning a git repository 
+Add an extra step to your deploy pipeline, where you start by cloning a remote git repository and use that as the website to upload to the server. If you are familiar with javascript build tools, try pulling a javascript webapp, build it, and upload it.
+
+### 3.2.2 `getopts`
+
+:book: Try to make your deploy-script use parameters with `getopts`! 
+- the parameters and their uses are: 
+  - `-c` Enables the steps to SSH into the server to check that the files are present
+  - `-s` Turns off any logging/printing to the console
+  - `-h` display usage
+- When you run the script it should look like this (when you invoke all the steps): 
+`./myscript.sh -cs`
+
+
+### 3.2.3 Zipping
+Zip the folder with your HTML-files before uploading them to the server. Unzip them on the server.
+
+:bulb: If you are working from a Macbook or a Linux machine, check out the `zip` utility. If you are working from a windows machine. If you are on windows, the simplest solution might be to download 7Zip, and use the `7z`-command. 
+
+---
+
+### [Go to bonus exercise 3 :arrow_right:](./exercise-3.md)

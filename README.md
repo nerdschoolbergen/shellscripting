@@ -11,12 +11,12 @@ You'll learn some basic bash programming and produce a simple deployment script 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
 some tips on useful tools and exercises. Happy hacking!
 
-## [Open presentation slides](https://drive.google.com/open?id=1f36I6_qXTvnwe3nBV4l4eGs9m-Z8u8Yp0Rzg0TitixY)
+## [Open presentation slides](https://docs.google.com/presentation/d/1-J1szF12Py9PSUclbSN95yceq0dwEsRsApyhIud_pG4/edit#slide=id.g16f2963420_3_5)
 
 ## What you need
 
 You'll need something that gives you a bash-like shell. If you're using a *nix system or OS X you'll be fine, if you're using Windows you can install one of the following:
-* Git for Windows: http://git-scm.com/downloads - Remember to opt in for Git Bash when installing)
+* __Git for Windows: http://git-scm.com/downloads__ - Remember to opt in for Git Bash when installing. This is also very useful to have installed for the upcoming git workshop)
 * Cygwin: https://www.cygwin.com/
 * Gow: https://github.com/bmatzelle/gow - More lightweight than Cygwin
 
@@ -31,15 +31,13 @@ You'll need something that gives you a bash-like shell. If you're using a *nix s
 
 ## Exercises
 
-- [Exercise 1](./exercises/exercise-1.md/) (start here)
+- [Exercise 1](./exercises/exercise-1.md/)
 - [Exercise 2](./exercises/exercise-2.md/)
 - [Exercise 3](./exercises/exercise-3.md/)
 
 ### Bonus exercises
 
 - [Bonus part 1](./exercises/bonus-1.md)
-- [Bonus part 2](./exercises/bonus-2.md)
-
 
 ## Helpful resources
 
