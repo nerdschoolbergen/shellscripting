@@ -65,5 +65,4 @@ If you don't want to type these type of configuration commands every time you op
   - Convert tabs to spaces
   - Make an alias so that `WQ` and `Wq` behave like the `wq` command (it's very easy to misspell these and any Unix-like system is case sensitive.)
   
-### [Go to bonus exercise 1 :arrow_right:](./bonus-1.md)
   
