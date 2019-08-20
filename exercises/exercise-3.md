@@ -30,4 +30,4 @@ Wooho! You guessed it using 7 tries.
 
 :star: Bonus: Can you validate that only integers are read into the program?
 
-### [Go to bonus exercise 1 :arrow_right:](./exercise-2.md)
+### [Go to bonus exercise 1 :arrow_right:](./bonus-1.md)
