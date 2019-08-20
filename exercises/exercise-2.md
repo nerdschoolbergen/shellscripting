@@ -5,8 +5,8 @@
 You will learn to:
   - Create your own script with functionality
  
-## 3.1 Create your script
-### 3.1.1 Copying and verifying files
+## 2.1 Create your script
+### 2.1.1 Copying and verifying files
 
 :exclamation: Feel free to ask for help if you are stuck or something is unclear. Also, google is your friend :-)
 
@@ -49,7 +49,7 @@ REMOTE_FOLDER="/var/www/$NAME/"
 
 
 
-### 3.1.2 Save backups
+### 2.1.2 Save backups
 
 If you run the script several times, you will try to copy files to an existing location. What we can do to fix this, is to create a mechanism for backing up the old files before deploying the new files. 
 
@@ -64,10 +64,10 @@ When you upload the folder with your HTML-files, create a copy of the folder to 
 If you enjoyed working with this exercise, there is a lot more you can add to the script. Here are some suggestions, but you can add any feature you like (**Show us if you do something cool**).
 
 
-## 3.2.1 Cloning a git repository 
+## 2.2.1 Cloning a git repository 
 Add an extra step to your deploy pipeline, where you start by cloning a remote git repository and use that as the website to upload to the server. If you are familiar with javascript build tools, try pulling a javascript webapp, build it, and upload it.
 
-### 3.2.2 `getopts`
+### 2.2.2 `getopts`
 
 :book: Try to make your deploy-script use parameters with `getopts`! 
 - the parameters and their uses are: 
@@ -78,11 +78,11 @@ Add an extra step to your deploy pipeline, where you start by cloning a remote g
 `./myscript.sh -cs`
 
 
-### 3.2.3 Zipping
+### 2.2.3 Zipping
 Zip the folder with your HTML-files before uploading them to the server. Unzip them on the server.
 
 :bulb: If you are working from a Macbook or a Linux machine, check out the `zip` utility. If you are working from a windows machine. If you are on windows, the simplest solution might be to download 7Zip, and use the `7z`-command. 
 
 ---
 
-### [Go to bonus exercise 3 :arrow_right:](./exercise-3.md)
+### [Go to exercise 3 :arrow_right:](./exercise-3.md)
