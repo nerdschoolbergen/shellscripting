@@ -1,5 +1,3 @@
-
-```bash
 #!/bin/bash
 
 # $((  )) is math context.
@@ -11,8 +9,8 @@ echo "Please enter a number between 1 and 100"
 
 until [[ "$GUESS" = "$NUMBER" ]]; do
 	
-	read -p "Number: " GUESS
-	let NUM_MOVES=$NUM_MOVES+1
+	read -r -p "Number: " GUESS
+	(( NUM_MOVES++ ))
 
 	# We skip rest of the executing and continue with the next iteration
 	if ! [[ "$GUESS" =~ ^[0-9]+$ ]]; then
@@ -29,4 +27,3 @@ until [[ "$GUESS" = "$NUMBER" ]]; do
 done
 
 echo "Wooho! You guessed it using $NUM_MOVES tries."
-```
