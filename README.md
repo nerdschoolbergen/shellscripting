@@ -1,6 +1,3 @@
-<img src="http://haacked.com/images/icons/Shell.ico" width="128" />
-
-
 # Shell scripting
 
 The CLI (Command-line interface) is a developer's friend and power tool. Learn some of the most
@@ -15,13 +12,14 @@ some tips on useful tools and exercises. Happy hacking!
 
 ## What you need
 
-You'll need something that gives you a bash-like shell. If you're using a *nix system or OS X you'll be fine, if you're using Windows you can install one of the following:
-* __Git for Windows: http://git-scm.com/downloads__ - Remember to opt in for Git Bash when installing. This is also very useful to have installed for the upcoming git workshop)
-* Cygwin: https://www.cygwin.com/
-* Gow: https://github.com/bmatzelle/gow - More lightweight than Cygwin
+You'll the Bash shell:
+
+* Linux/MacOS: Bash is already included
+* Windows: Install [Git for Windows](https://git-scm.com/download/win) - Remember to opt in for Git Bash when installing
 
 ## How to get started
 
+* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the green "Code" button to the top right, and then select "Download zip". Unzip the downloaded zip file (make sure to remember where you put it).  
 * Although you have this `README.md` file on your computer, it's easier to read it on GitHub with formatting. We therefore recommend you keep a web browser tab open with the exercise tasks.
 * Start by opening [exercise 1](./exercises/exercise-1.md/).
 * Remember to ask an instructor if you're stuck.
