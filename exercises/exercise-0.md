@@ -135,7 +135,7 @@ Examples of some shells:
 
 #### 1.3.1.1 - Ubuntu
 
-:pencil2: Search for the Terminal app by selecting the _Show Applications_  button at the bottom left of the screen, then type "terminal" into the search field at the top of the screen. Select "Terminal" to open.
+:pencil2: Search for the Terminal app by selecting the _Show Applications_ button at the bottom left of the screen, then type "terminal" into the search field at the top of the screen. Select "Terminal" to open.
 
 The result should be something like this:
 
@@ -156,7 +156,29 @@ Google is your friend :)
 
 ### 1.3.2 - Mac-users
 
-:pencil2: Follow the [offical guide from Apple](https://support.apple.com/no-no/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac)
+:pencil2: Follow the [offical guide from Apple](https://support.apple.com/no-no/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) on how open the Terminal app included in Mac OS.
+
+### 1.3.3 - Windows-users
+
+:pencil2: Open "Git Bash" from the Start menu.
+
+The result should be something like this:
+
+<img src="images/git-bash.jpg" width="600">
+
+#### Windows Terminal users
+
+:pencil2: If you have Windows Terminal installed, open it from the Start menu.
+
+The result should be something like this:
+
+<img src="images/windows-terminal-first-run.png" width="600">
+
+:pencil2: Windows Terminal includes shortcuts to open several different shells, and Powershell is the default shell (can be configured). To open Git Bash, press the "down-arrow"-button (next to the "new tab"/`+` button) and select "Git Bash" from the list of shells:
+
+<img src="images/git-bash-windows-terminal.png" width="600">
+
+:exclamation: Not seeing Git Bash in the list? Following [this guide](https://www.timschaeps.be/post/adding-git-bash-to-windows-terminal/) to add Git Bash to Windows Terminal.
 
 ## Summary
 
@@ -167,52 +189,4 @@ Google is your friend :)
   - CLI
 - You learned how to install and open a terminal
 
-> :exclamation: Use `> :exclamation:` to indicate something important. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra in ex quis efficitur. Morbi dapibus aliquet cursus. Suspendisse potenti. Nam aliquet dolor odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ornare libero convallis, posuere lectus id, porta libero. Duis non tellus sapien.
-
-> :question: Use `> :question:` for open-ended questions to the reader ("What do you think would happen if..."). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra in ex quis efficitur. Morbi dapibus aliquet cursus. Suspendisse potenti. Nam aliquet dolor odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ornare libero convallis, posuere lectus id, porta libero. Duis non tellus sapien.
-
-> :poop: Use `> :poop:` to indicate a bad practice (don't-do-this). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra in ex quis efficitur. Morbi dapibus aliquet cursus. Suspendisse potenti. Nam aliquet dolor odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ornare libero convallis, posuere lectus id, porta libero. Duis non tellus sapien.
-
-:pencil2: Use `:pencil2:` to indicate a task (do-this-now). This replaces bulletpoints.  
-:pencil2: Use `:pencil2:` to indicate a task (do-this-now). This replaces bulletpoints.<br/>
-:pencil2: Use `:pencil2:` to indicate a task (do-this-now). This replaces bulletpoints.  
-
-(Note: Use two spaces at the end of a line or `<br/>` to force a new line without using lists/bulletpoints)
-
-:star: Use `:star:` to indicate a bonus task. This replaces bulletpoints.<br/>
-:star: Use `:star:` to indicate a bonus task. This replaces bulletpoints.<br/>
-:star: Use `:star:` to indicate a bonus task. This replaces bulletpoints.<br/>
-
-## 1.2 {Exersice section}
-
-Any reference to something in code should be wrapped in either a `inline code` section or a
-```
-code block
-```
-
-Always highlight with the programming language if possible:
-
-```javascript
-function code() {
-  return 'awesome';
-}
-```
-
-Use the `diff` code block to indicate changes in code
-
-```diff
-- foo
-+ bar
-```
-
-Use the `<kbd>` HTML tag to indicate keyboard keys:
-
-<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>
-
-`<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>`
-
-Include a link to the next exercise, or clearly state that this is the last exercise of the workshop.
-
-`### [Go to exercise 2 :arrow_right:](../exercise-2/README.md)`
-
-### [Go to exercise 2 :arrow_right:](../exercise-2/README.md)
+### [Go to exercise 2 :arrow_right:](exercise-2.md)
