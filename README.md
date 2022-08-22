@@ -30,7 +30,8 @@ You'll the Bash shell:
 
 - [Exercise 1](./exercises/exercise-1.md/) - Getting started
 - [Exercise 2](./exercises/exercise-2.md/) - Basics of the shell
-- [Exercise 3](./exercises/exercise-3.md/) - Number guessing game
+- [Exercise 2](./exercises/exercise-3.md/) - Scripting
+- [Exercise 3](./exercises/exercise-4.md/) - Number guessing game
 
 ### Bonus exercises
 
