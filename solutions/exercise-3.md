@@ -1,24 +1,31 @@
 # Solutions - Exercise 3
 
 ---
-### 3.4
+### 3.4 - Create bash scripts
 
 *Use a for loop to print out the first few lines of each file in a directory. Try to do this both as a script and as a one-liner in the shell*
 
 __Script__
-```bash
-# Multi-line
 
-for filename in ../files/*
+Multi-line:
+
+```bash
+#!/bin/bash
+
+for filename in ./*
 do
-    head -n 2 $filename
+    head -n 2 "$filename"
     printf "\n\n"
 done
-
-# One-liner
-
-for f in ./files/*; do head -n 2 $f; printf "\n\n"; done
 ```
+
+One-liner:
+
+```bash
+for f in ./*; do head -n 2 "$f"; printf "\n\n"; done
+```
+
+---
 
 *Make a variable containing the path of a directory or a file that exists in your filesystem.
 Make a test that checks whether the path exists, and if is a directory or a regular file. Print `Path does not exist` if the file doesn't exist. Print `Path is a directory` if the path is a directory, or `Path is a file` if the path is a regular file. Create a script that you can run to check the status of the path currently stored in your variable (e.g. `./filecheck.sh`).*
@@ -40,7 +47,7 @@ fi
     
 ```
 
-*Instead of storing the path of the file or folder you want to check, can you pass it inn as a parameter to the script? (E.g. `./filecheck.sh /home/myfolder`).*
+*Instead of storing the path of the file or folder you want to check, can you pass it in as a parameter to the script? (E.g. `./filecheck.sh /home/myfolder`).*
 
 ```bash
 # Check if the parameters were passed. Exit if not.
@@ -61,8 +68,8 @@ then
 else
     echo "Path does not exist"
 fi
-
 ```
+
 *Are you able to use the variable containing the file or directory, printing the path of the file in the output? E.g. `"/home/root/file.txt" is a file`.* 
 
 ```bash
@@ -85,5 +92,4 @@ then
 else
     echo "$1 does not exist"
 fi
-
 ```

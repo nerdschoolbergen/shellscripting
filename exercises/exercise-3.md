@@ -56,13 +56,19 @@ The result should be something like this:
 
 :book: You can of course also create files directly inside VS Code.
 
-:pencil2: Update the contents of `helloworld.sh` with the following:
+:pencil2: Update the contents of `helloworld.sh` with the following using VS Code:
 
 ```bash
 #!/bin/bash
 MESSAGE="Hello World!"
 echo "$MESSAGE"
 ```
+
+:exclamation: Remember to save your file.
+
+:book: The first line in the script above is something called a "shebang": `#!/bin/bash`. It sets the target shell to be used when executing the script. The shebang is not strictly required when creating shell scripts, but is a recommended best practice. Omitting it can some times lead to compatibility issues, as some shells have different scripting syntax than others.
+
+:book: The last two lines in the script assigns a value to a local variable and outputs it.
 
 ### Executing scripts
 
@@ -132,7 +138,7 @@ Example output:
 
 :exclamation: Be careful when setting file permissions, as the wrong file permissions on the wrong set of files can lead to unintended access to your system.
 
-:book: To set file permssions  we use the `chmod` command, which sets the permissions of files and directories. To add the execute (`x`) permission to a file for everyone, you can use the syntax `chmod +x <filename>`.
+:book: We use the `chmod` command to set the permissions of files. To add the execute (`x`) permission to a file for everyone, you can use the syntax `chmod +x <filename>`.
 
 :pencil2: Add execute permissions for everyone to the file `helloworld.sh`.
 
@@ -142,19 +148,15 @@ Example output:
 
 :book: The script should now output:
 
-```
+```bash
 Hello World!
 ```
 
-### Executing helloworld.sh
-
-:book: In order to execute our `helloworld.sh` script 
-
 ### 3.4 - Create bash scripts
 
-:book: These tasks require you to create bash scripts that you can execute in your shell.
+:book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
-:pencil2: Create a script called `listcontents.sh`. Use a for loop to print out the first few lines of each file in a directory. Try to do this both as a script and as a one-liner in the shell.
+:pencil2: Use a for loop to print out the first few lines of each file in a directory. Try to do this both as a script and as a one-liner in the shell.
 
 :pencil2: Make a variable containing the path of a directory or a file that exists in your filesystem.
 Make a test that checks whether the path is a directory or a regular file. Print `Directory` if the path is a directory, or `File` if the path is a regular file. Create a script that you can run to check the status of the path currently stored in your variable (e.g. `./filecheck.sh`).
