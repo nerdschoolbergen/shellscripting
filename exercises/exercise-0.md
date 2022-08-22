@@ -38,7 +38,7 @@ Later terminals replaced the printer with a screen, called video terminals:
 
 :book: Terminal emulators have other useful features like search, tabs, split screen, visual appearance customization and much more.
 
-:exclamation: Linux has a default terminal that come preinstalled in evry Linux distrobution, depending on what distrobution you use. MacOS has a default terminal aptly named "Terminal". Windows sadly (as of august 2022) does not yet come with a "proper" default terminal, but Microsoft recommends installing [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/).
+:exclamation: Linux has a default terminal that come preinstalled in evry Linux distribution, depending on what distribution you use. MacOS has a default terminal aptly named "Terminal". Windows sadly (as of august 2022) does not yet come with a "proper" default terminal, but Microsoft recommends installing [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/).
 
 Examples of alternative terminal emulators:
 
@@ -124,13 +124,48 @@ Examples of some shells:
 
 :pencil2: (Optional) Follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
 
+## 1.3 - Opening the terminal
+
+### 1.3.1 - Linux-users
+
+:book: In order to open the default terminal app in Linux you need to know what distribution of Linux you have installed. Here are the names of some default terminals:
+
+- Terminal (GNOME-based distros)
+- konsole (KDE-based distros)
+
+#### 1.3.1.1 - Ubuntu
+
+:pencil2: Search for the Terminal app by selecting the _Show Applications_  button at the bottom left of the screen, then type "terminal" into the search field at the top of the screen. Select "Terminal" to open.
+
+The result should be something like this:
+
+<img src="images/ubuntu-terminal.png" width="600">
+
+#### 1.3.1.2 - Mint Linux
+
+:pencil2: Open the Mint Menu by selecting the green button at the bottom left of the screen.<br/>
+:pencil2: Click on the terminal icon in the left side of the menu.
+
+The result should be something like this:
+
+<img src="images/mint-linux-terminal.png" width="600">
+
+#### 1.3.1.x - Other distros
+
+Google is your friend :)
+
+### 1.3.2 - Mac-users
+
+:pencil2: Follow the [offical guide from Apple](https://support.apple.com/no-no/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac)
+
 ## Summary
 
-- Terms you learned in this exercise:
+- You learned the basic terminology:
   - Console, shell, terminal
   - Unix shell, Windows shell
   - bash, sh, powershell
   - CLI
+- You learned how to install and open a terminal
 
 > :exclamation: Use `> :exclamation:` to indicate something important. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra in ex quis efficitur. Morbi dapibus aliquet cursus. Suspendisse potenti. Nam aliquet dolor odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ornare libero convallis, posuere lectus id, porta libero. Duis non tellus sapien.
 
