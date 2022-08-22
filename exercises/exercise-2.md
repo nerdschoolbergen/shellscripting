@@ -2,15 +2,33 @@
 
 You will learn to:
 
+- Understand how the command line works
 - Navigate through files and directories using a shell
-- Create simple bash scripts
 
-From here you'll need to use Google more and more to complete the tasks. You can also check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section). 
+:book: Check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section).
 
-:bulb: Googling is NOT cheating :-)
---- 
+---
 
-## 2.1 - Files and directories
+## 2.1 - The command prompt
+
+:book: When you start a shell, a prompt appears on the screen where the user can type text input. This prompt is also called a _command line_ or _commmand prompt_. On most systems the prompt has a `$` to denote where the command prompt is on the screen:
+
+```bash
+$
+```
+
+:book: Pressing <kbd>Enter</kbd> will tell the shell to execute the input. If the input generates some output, it's displayed under the command line:
+
+```bash
+$ ls
+<output is displayed here>
+```
+
+## 2.2 - Programs
+
+
+
+## 2.2 - Files and directories
 
 :pencil2: Start by opening your terminal application.
 

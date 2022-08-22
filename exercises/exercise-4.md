@@ -10,7 +10,8 @@ Create a number guessing game. The user should be asked to enter a number betwee
 If the user's guess is too low or too high, the script should print a descriptive message (E.g. `Your guess is too low`). If the user guesses the correct answer, the script should print out the number of tries, before exiting. 
 
 Here is some example execution:
-```
+
+```bash
 Please enter a number between 1 and 100
 Number: 50
 The number is too low
@@ -27,7 +28,3 @@ The number is too high
 Number: 58
 Wooho! You guessed it using 7 tries.
 ```
-
-:star: Bonus: Can you validate that only integers are read into the program?
-
-### [Go to bonus exercise 1 :arrow_right:](./bonus-1.md)

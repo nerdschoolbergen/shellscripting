@@ -46,7 +46,7 @@ The result should be something like this:
 
 ## 3.3 - Hello world script
 
-:book: Notice that the left side Explorer pane of VS Code is empty, because the folder you opened is empty. To create a file using the command line, use the command `touch <filename>`.
+:book: Notice that the left side Explorer pane of VS Code is empty, because the folder you opened is empty. To create a empty file using the command line, use the command `touch <filename>`.
 
 :pencil2: Create a file called `helloworld.sh` using the `touch` command.
 
@@ -138,11 +138,11 @@ Example output:
 
 :exclamation: Be careful when setting file permissions, as the wrong file permissions on the wrong set of files can lead to unintended access to your system.
 
-:book: We use the `chmod` command to set the permissions of files. To add the execute (`x`) permission to a file for everyone, you can use the syntax `chmod +x <filename>`.
+:book: We use the `chmod` command to set the permissions of files. To add the execute (`x`) permission to a file for the file owner, you can use the syntax `chmod u+x <filename>`.
 
 :pencil2: Add execute permissions for everyone to the file `helloworld.sh`.
 
-:pencil2: Check that the permissions are correct using the `ls -l` command like we did previously. The correct result should be `rwxr-xr-x`.
+:pencil2: Check that the permissions are correct using the `ls -l` command like we did previously. The correct result should be `rwxr--r--`.
 
 .pencil2: Try executing the script again using the `./ <filename>` syntax.
 
