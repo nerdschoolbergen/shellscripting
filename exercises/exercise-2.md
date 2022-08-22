@@ -1,4 +1,4 @@
-# Exercise 1 - Basics of the shell
+# Exercise 2 - Basics of the shell
 
 You will learn to:
 
@@ -10,13 +10,13 @@ From here you'll need to use Google more and more to complete the tasks. You can
 :bulb: Googling is NOT cheating :-)
 --- 
 
-## 1.1 - Files and directories
+## 2.1 - Files and directories
 
 :pencil2: Start by opening your terminal application.
 
-:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh`. This means that when you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/).
+:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh`. This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/).
 
-### 1.1.1 - In your terminal
+### 2.1.1 - In your terminal
 
 These first tasks are all about getting comfortable in your terminal, and execute some common commands.
 
