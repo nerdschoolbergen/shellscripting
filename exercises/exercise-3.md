@@ -80,6 +80,8 @@ bash: ./helloworld.sh: Permission denied
 
 ### File permissions
 
+:book: In Unix shells, scripts and programs (binaries) are both _files_. To be able to execute a script or a program, the correct file permissions must be set.
+
 :book: File permissions in Unix shells are divided into three settings:
 
 - File owner permissions
@@ -116,9 +118,37 @@ Example output:
     - Owner group permissions: `r--` - Members of the group `users` have the right to read the file.
     - Other user permissions: `r--` - Everybody else have the right to read the file.
 
-The following diagram explains all the settings:
+:book: The following diagram explains all the settings:
 
 <img src="images/file_permissions.png" >
+
+:book: Some examples of common settings:
+
+- `rwxrwxrwx` - Every user has the right to do anything.
+- `rwx------` - File owner can do anything, nobody else has any rights.
+- `rwxr-xr-x` - File owner can do anything, everybody else can read and execute the file. This setting is common for all programs that are used by all users on a computer, for example `bash` itself, or `ls`, `cd`, etc.
+
+### Changing file permissions
+
+:exclamation: Be careful when setting file permissions, as the wrong file permissions on the wrong set of files can lead to unintended access to your system.
+
+:book: To set file permssions  we use the `chmod` command, which sets the permissions of files and directories. To add the execute (`x`) permission to a file for everyone, you can use the syntax `chmod +x <filename>`.
+
+:pencil2: Add execute permissions for everyone to the file `helloworld.sh`.
+
+:pencil2: Check that the permissions are correct using the `ls -l` command like we did previously. The correct result should be `rwxr-xr-x`.
+
+.pencil2: Try executing the script again using the `./ <filename>` syntax.
+
+:book: The script should now output:
+
+```
+Hello World!
+```
+
+### Executing helloworld.sh
+
+:book: In order to execute our `helloworld.sh` script 
 
 ### 3.4 - Create bash scripts
 
