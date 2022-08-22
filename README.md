@@ -8,7 +8,7 @@ You'll learn some basic bash programming and produce a simple deployment script 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
 some tips on useful tools and exercises. Happy hacking!
 
-## [Open presentation slides](https://docs.google.com/presentation/d/1-J1szF12Py9PSUclbSN95yceq0dwEsRsApyhIud_pG4/edit#slide=id.g16f2963420_3_5)
+## [Open presentation slides](https://drive.google.com/drive/folders/1ky-GiCj6xeeLMK0ZUJCEoMrc191q8FE9?usp=sharing)
 
 ## What you need
 
@@ -24,14 +24,13 @@ You'll the Bash shell:
 * Start by opening [exercise 1](./exercises/exercise-1.md/).
 * Remember to ask an instructor if you're stuck.
 
-> :exclamation: Hottest tip: Google is your friend. You will need to google alot as you dive into the exercises! 
-
+> :exclamation: Hottest tip: Google is your friend. You will need to google alot as you dive into the exercises!
 
 ## Exercises
 
-- [Exercise 1](./exercises/exercise-1.md/)
-- [Exercise 2](./exercises/exercise-2.md/)
-- [Exercise 3](./exercises/exercise-3.md/)
+- [Exercise 1](./exercises/exercise-1.md/) - Getting started
+- [Exercise 2](./exercises/exercise-2.md/) - Basics of the shell
+- [Exercise 3](./exercises/exercise-3.md/) - Number guessing game
 
 ### Bonus exercises
 
@@ -39,15 +38,22 @@ You'll the Bash shell:
 
 ## Helpful resources
 
-- [1. Navigation](#1-navigation)
-- [2. Getting an overview](#2-getting-an-overview)
-- [3. Files and directories](#3-files-and-directories)
-- [4. Editing](#4-editing)
-- [5. Scripting basics](#5-scripting-basics)
-- [6. Remote access](#6-remote-access)
-- [7. How do I get help?](#7-how-do-i-get-help)
-- [8. Nice to know about systems](#8-nice-to-know-about-systems)
-- [9. Scripting](#9-scripting)
+- [Shell scripting](#shell-scripting)
+  - [Open presentation slides](#open-presentation-slides)
+  - [What you need](#what-you-need)
+  - [How to get started](#how-to-get-started)
+  - [Exercises](#exercises)
+    - [Bonus exercises](#bonus-exercises)
+  - [Helpful resources](#helpful-resources)
+  - [1. Navigation](#1-navigation)
+  - [2. Getting an overview](#2-getting-an-overview)
+  - [3. Files and directories](#3-files-and-directories)
+  - [4. Editing](#4-editing)
+  - [5. Scripting basics](#5-scripting-basics)
+  - [6. Remote access](#6-remote-access)
+  - [7. How do I get help?](#7-how-do-i-get-help)
+  - [8. Nice to know about systems](#8-nice-to-know-about-systems)
+  - [9. Scripting](#9-scripting)
 
 ## 1. Navigation
 - `ls`: what's in this directory? ("list")
