@@ -62,6 +62,6 @@ Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` s
 
 ## Summary
 
-TBD
+In this exercise, we used some of the basic commands using our terminal and the bash shell. These are commonly used commands that we need to navigate and view the files of our system.Using a shell, you have the ability to automate your workflows by either creating useful scripts or gluing together different scripts and program in your system for maximum efficiency. In the next exercise, we will look into some of the things that make the shell effective - scripting.
 
 ### [Go to exercise 3 :arrow_right:](./exercise-3.md)

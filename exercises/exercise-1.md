@@ -36,7 +36,7 @@ Later terminals replaced the printer with a screen, called video terminals:
 
 #### Modern terminals
 
-:book: When we refer to a terminal in the software sense, we are referring to a literal software version of a TTY. Software terminals display text output, takes user input and passes it on. The terminal does not actually do any processing of output or input. Software termnials are also called terminal emulators, because of the way they _emulate_ the early video terminals.
+:book: When we refer to a terminal in the software sense, we are referring to a literal software version of a TTY. Software terminals display text output, takes user input and passes it on. The terminal does not actually do any processing of output or input. Software terminals are also called terminal emulators, because of the way they _emulate_ the early video terminals.
 
 :book: Terminal emulators have other useful features like search, tabs, split screen, visual appearance customization and much more.
 

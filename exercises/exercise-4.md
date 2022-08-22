@@ -28,3 +28,5 @@ The number is too high
 Number: 58
 Wooho! You guessed it using 7 tries.
 ```
+
+### [Go to exercise 5 :arrow_right:](./exercise-5.md)
