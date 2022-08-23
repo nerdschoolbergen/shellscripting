@@ -24,9 +24,29 @@ $ ls
 <output is displayed here>
 ```
 
-## 2.2 - Programs
+## 2.2 - Commands and programs
 
+:book: On Unix-like operating systems (like Linux and macOS) the commands you can execute using the shell (like `ls`, `mkdir`, `cd`, etc.) are separate from the shell itself, not a part of the shell. What commands are available depends on the OS and what the user has installed.
 
+:book: In order to standardise commands, many Unix-like OS-es come 
+
+:book: The shell in it self is also a command, like other commands :)
+
+:pencil2: Try starting a new shell process by typing `bash` and then pressing <kbd>Enter</kbd>:
+
+```bash
+$ bash
+...
+$
+```
+
+:book: Note that the result is a new command prompt for a new shell. This new shell is a child process of the first shell. To exit the child shell process and return to the first shell, use the `exit` command:
+
+```bash
+$ exit
+exit
+$
+```
 
 ## 2.2 - Files and directories
 
