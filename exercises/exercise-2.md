@@ -33,18 +33,20 @@ $ ls
 - `/bin` - Essential commands like `ls`, `cp`, `rm`, in addition to shell programs like `bash`.
 - `/usr/bin` - Non-essential commands like `find`, `grep`, `head`, `tail`.
 
-:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh`. This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/).
-
-:pencil2: Start by opening your terminal application.
-
-:pencil2: Try listing the contents of these folders using the `ls <foldername>` command to get a list of commands.
-
 :book: In addition to the folders above, there are standard folders for system-level commands (that perform tasks like formatting disks and configuring the OS):
 
 - `/sbin` - Essential system commands like `ping`, `shutdown`, `mount`.
 - `/usr/sbin` - Non-essential system commands like `chmod`, `tcpdump` and `netstat`.
 
-:book: 
+[Here](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf) is a list of standard commands.
+
+### 2.2.1 - Your first command
+
+:pencil2: Start by opening your terminal application.
+
+:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh` (not `bash`). This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
+
+:pencil2: Try listing the contents of these folders using the `ls <foldername>` command to get a list of commands.
 
 :book: The shell in it self is also a command, like other commands :)
 
@@ -86,35 +88,88 @@ Parameters are always prefixed with a `-` (sometimes they have an alternative "l
 
 What parameters and arguments a command takes, and if they are mandatory or not depends on the command.
 
-:pencil2: The `ls` command has a parameter called `-l`, which lists files and directories with a "long form" output. Try using this parameter to list out the contents of a directory.
+:pencil2: The `ls` command has an optional parameter called `-l`, which changes the output of the command to a more detailed "long form". Try using this parameter to list out the contents of a directory.
 
 ## 2.2 - Files and directories
 
 These first tasks are all about getting comfortable in your terminal, and execute some common commands.
 
-:pencil2: List the contents of the directory you are currently standing in
-
 :pencil2: Print the path to the current working directory
 
 :pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
 
-:pencil2: List all `txt` files in a the `files` directory with human-readable size references ordered
-  by the last-modified date.
+:pencil2: List all `.txt` files in a the `files` directory with human-readable size references ordered
+by the last-modified date.
 
 Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` switches
 
 :pencil2: Find the location of your `git` executable.
 
-:pencil2: Listen to the tail end of the file `file1.txt` in the `files` folder. Try adding new content to the file.
+:pencil2: Listen to the tail end of the file `file1.txt` in the `files` folder.
+
 :question: How do you exit from the live view of the file?
 
-:pencil2: List the contents of your PATH variable
+## 2.3 - Environment variables and $PATH
 
-:pencil2: Create a new directory and add this directory to your PATH variable. Verify that it was added by repeating the previous step.
+:book: How does the shell know what directories to search for to locate executable programs? Searching the whole filesystem would be very slow and inefficient. Therefore, to locate a program, the shell reads the locations from a special configuration value called the _PATH variable_, or `$PATH`.
 
-## 2.3 - Basic shell navigation
+:book: The value of `$PATH` consists of one or more directories separated by a colon:
 
-## 2.4 - Signals
+`/some/dir:/another/dir:/a/third/dir`
+
+:book: The shell searches through all directories in the `$PATH` to locate the program you are trying to execute. If you have two executable files sharing the same name located in two different directories, the shell will run the file that is in the directory that comes first in the `$PATH`.
+
+:pencil2: List the contents of your PATH variable using the `echo` command.
+
+:book: Note that you have several different directories in your `$PATH` in addition to the standard directories we mentioned earlier.
+
+### 2.3.1 - Environment variables
+
+:book: Environment variables are variables with name and a value used by the shell and other programs.
+
+Variables have the following format:
+
+```bash
+KEY=value
+KEY="Some other value"
+KEY=value1:value2
+```
+
+:pencil2: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
+
+```bash
+$ TEST=123
+$
+```
+
+Note that assiging a value to a variable will not generate any output.
+
+:pencil2: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
+
+```bash
+$ echo $TEST
+123
+```
+
+:pencil2: Try assigning a new value to the `TEST`-variable, and show the new value.
+
+Note that overwriting variables is no different than creating new variables.
+
+:pencil2: Try closing the terminal, and open it again. Then try echoing out the value of `TEST` again.
+
+:question: The `TEST` variable now has no value. Why is this?
+
+:book: When defining variables in the shell, the value of variables will be lost when the shell process is exited.
+
+:question: But if `$PATH` is a environment variable and variable values are lost when exiting the shell, how is `$PATH` defined each time you open a new shell?
+
+:book: When the `bash` shell starts up, it reads a special configuration script called `.bashrc`. Bash comes with a standard `.bashrc` script named `bash.bashrc`, where (among other things) the base value of the `$PATH` variable is defined for every user on the computer.
+
+:book: Each user on the computer can override any setting in the global `bash.bashrc` file by creating a file called `.bashrc` in the user's home folder. In some OSes this file is already present by default. This file can be used to define or redefine any variable that the user wants to be set at startup, for example the `$PATH`. This is very useful for scripting, as we will se in the next exercise.
+
+## 2.x - Basic shell navigation
+
+## 2.x - Signals
 
 ---
 
