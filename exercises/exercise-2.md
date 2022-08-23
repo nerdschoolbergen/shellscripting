@@ -26,9 +26,25 @@ $ ls
 
 ## 2.2 - Commands and programs
 
-:book: On Unix-like operating systems (like Linux and macOS) the commands you can execute using the shell (like `ls`, `mkdir`, `cd`, etc.) are separate from the shell itself, not a part of the shell. What commands are available depends on the OS and what the user has installed.
+:book: On Unix-like operating systems (like Linux and macOS) the commands you can execute using the shell (like `ls`, `mkdir`, `cd`, etc.) are small programs, not a part of the shell itself. What commands are available depends on the OS and what the user has installed.
 
-:book: In order to standardise commands, many Unix-like OS-es come 
+:book: To make things easier, Unix-like OS-es come with a standard set of programs or commands called [POSIX](https://itsfoss.com/posix/) commands. These commands are located in a [standard set of folders](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard):
+
+- `/bin` - Essential commands like `ls`, `cp`, `rm`, in addition to shell programs like `bash`.
+- `/usr/bin` - Non-essential commands like `find`, `grep`, `head`, `tail`.
+
+:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh`. This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/).
+
+:pencil2: Start by opening your terminal application.
+
+:pencil2: Try listing the contents of these folders using the `ls <foldername>` command to get a list of commands.
+
+:book: In addition to the folders above, there are standard folders for system-level commands (that perform tasks like formatting disks and configuring the OS):
+
+- `/sbin` - Essential system commands like `ping`, `shutdown`, `mount`.
+- `/usr/sbin` - Non-essential system commands like `chmod`, `tcpdump` and `netstat`.
+
+:book: 
 
 :book: The shell in it self is also a command, like other commands :)
 
@@ -48,13 +64,31 @@ exit
 $
 ```
 
+### 2.2.1 - General syntax for commands
+
+:book: All commands in Unix-like systems follow a basic syntax:
+
+- `<command>`
+- `<command> <argument>`
+- `<command> -<parameter>`
+- `<command> -<parameter> <argument>`
+
+An example:
+
+`cp -R dir1/ dir2/` - copy all files and subdirectories from `dir1` into `dir2`
+
+- `cp` is the command
+- `-R` is a parameter - in the context of `ls` it means copy recursively (copy all files and subfolders).
+- `folder1/` is a argument - In the context of `ls` it's the source directory
+- `folder2/` is a argument - In the context of `ls` it's the target folder
+
+Parameters are always prefixed with a `-` (sometimes they have an alternative "long" human-readable form style syntax with a `--` prefix, like `--count` instead of `-c`).
+
+What parameters and arguments a command takes, and if they are mandatory or not depends on the command.
+
+:pencil2: The `ls` command has a parameter called `-l`, which lists files and directories with a "long form" output. Try using this parameter to list out the contents of a directory.
+
 ## 2.2 - Files and directories
-
-:pencil2: Start by opening your terminal application.
-
-:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh`. This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/).
-
-### 2.1.1 - In your terminal
 
 These first tasks are all about getting comfortable in your terminal, and execute some common commands.
 
@@ -77,6 +111,10 @@ Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` s
 :pencil2: List the contents of your PATH variable
 
 :pencil2: Create a new directory and add this directory to your PATH variable. Verify that it was added by repeating the previous step.
+
+## 2.3 - Basic shell navigation
+
+## 2.4 - Signals
 
 ---
 
