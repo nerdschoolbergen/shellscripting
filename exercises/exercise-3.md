@@ -3,6 +3,7 @@
 You will learn to:
 
 - Create and execute simple bash scripts
+- Add scripts to the `$PATH`
 
 ## Required software and tools for this exercise
 
@@ -36,7 +37,7 @@ You will learn to:
 
 :pencil2: To open this folder as your workspace folder inside VS Code, you can launch VS Code from the command line using the `code .` command.
 
-:exclamation: macOS-users need to follow an one-time [additional VS Code setup step](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add the `code` command to PATH.
+:exclamation: macOS-users need to follow an one-time [additional VS Code setup step](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to add the `code` command to `$PATH`.
 
 :exclamation: If you receive a warning saying "Do you trust the authors of the files in this folder?", press "Yes, i trust the authors".
 
@@ -163,8 +164,36 @@ Make a test that checks whether the path is a directory or a regular file. Print
 
 :star: Bonus: Instead of storing the path of the file or folder you want to check, can you pass it inn as a parameter to the script? (E.g. `./filecheck.sh /home/myfolder`).
 
-:star: Bonus: Are you able to use the variable containing the file or directory, printing the path of the file in the output? E.g. `"/home/root/file.txt" is a file`. 
+:star: Bonus: Are you able to use the variable containing the file or directory, printing the path of the file in the output? E.g. `"/home/root/file.txt" is a file`.
 
 ---
+
+### 3.5 - Adding scripts to the $PATH
+
+:book: If you create a script you want to use without executing it from the directory it is located in, you can add the script directory to the `$PATH` variable. Like we discussed in the previous exercise, the `$PATH` is set at startup and can be overridden using a `.bashrc` configuration file in the home directory.
+
+:pencil2: Change the current directory to the home directory using `cd ~`. (`~` is an alias of the path to the current user´s home directory)
+
+:pencil2: Create a new empty file in the home directory called `.bashrc`.
+
+:exclamation: Notice that if you list the contents of the home directory the `.bashrc` file is hidden. This is because of the `.` prefix in the filename, which tells the OS to hide the file. To list hidden files using `ls` you can use the `-a` parameter.
+
+:pencil2: Open the `.bashrc` file in VS Code using the `code` command and add the following:
+
+```bash
+export PATH=~/nerdschool-shellscripting:$PATH
+```
+
+Notice that we use `export` to create a environment variable.
+
+:question: Why is `PATH` assigned the value of `$PATH`?
+
+:exclamation: If we redefine `PATH` by doing `export PATH=/some/dir`, we loose the exiting value if we don't append it to the new value. Not retaining the predefined value of `$PATH` will cause the shell to not find any of the essential commands like `ls` and `cp`, which causes problems.
+
+:pencil2: The `.bashrc` file is only read at startup, so to see if the `$PATH` was updated you need to start a new bash shell.
+
+:pencil2: Try echoing out the value of `$PATH` to see if it includes the new directory we added.
+
+:pencil2: Try executing some of the scripts inside the `nerdschool-shellscripting` directory by typing `<scriptname.sh>` while the current directory is any other directory.
 
 ### [Go to exercise 4 :arrow_right:](./exercise-4.md)

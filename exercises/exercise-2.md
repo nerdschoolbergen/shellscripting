@@ -123,9 +123,9 @@ Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` s
 
 :book: Note that you have several different directories in your `$PATH` in addition to the standard directories we mentioned earlier.
 
-### 2.3.1 - Environment variables
+### 2.3.1 - Shell variables
 
-:book: Environment variables are variables with name and a value used by the shell and other programs.
+:book: Shell variables are variables with name and a value used by the shell and other programs.
 
 Variables have the following format:
 
@@ -159,13 +159,37 @@ Note that overwriting variables is no different than creating new variables.
 
 :question: The `TEST` variable now has no value. Why is this?
 
-:book: When defining variables in the shell, the value of variables will be lost when the shell process is exited.
+:book: Shell variables will be lost when the shell process is exited.
 
-:question: But if `$PATH` is a environment variable and variable values are lost when exiting the shell, how is `$PATH` defined each time you open a new shell?
+:question: But if `$PATH` is a shell variable and variable values are lost when exiting the shell, how is `$PATH` defined each time you open a new shell?
 
-:book: When the `bash` shell starts up, it reads a special configuration script called `.bashrc`. Bash comes with a standard `.bashrc` script named `bash.bashrc`, where (among other things) the base value of the `$PATH` variable is defined for every user on the computer.
+:book: When the `bash` shell starts up, it runs a set of special configuration scripts which defines the value of `$PATH` for every user on the computer.
 
-:book: Each user on the computer can override any setting in the global `bash.bashrc` file by creating a file called `.bashrc` in the user's home folder. In some OSes this file is already present by default. This file can be used to define or redefine any variable that the user wants to be set at startup, for example the `$PATH`. This is very useful for scripting, as we will se in the next exercise.
+:book: Each user on the computer can override any setting in the global configuration by creating a file called `.bashrc` in the user's home folder. In some OSes this file is already present by default. This file can be used to define or redefine any variable that the user wants to be set at startup, for example the `$PATH`. This is very useful for scripting, as we will see in the next exercise.
+
+### 2.3.2 - Environment variables
+
+:book: Environment variables are variables that are available to all subprocesses of a shell, not just the current shell.
+
+:pencil2: Try defining a shell variable and open up a new child shell using the `bash` command. Then echoing out the value of the shell variable you previously defined in the parent shell.
+
+Notice that the variable has no value.
+
+:pencil2: Exit out of the child shell using `exit`.
+
+:pencil2: To create a environment variable from a shell variable, first define the variable and then use the `export` command:
+
+```bash
+$ MYVAR=TEST123
+
+$ export MYVAR
+```
+
+You can do this in one line as well: `export MYVAR=1TEST123`.
+
+:pencil2: Try opening up a child shell again and echo out the value of your new environment variable.
+
+:book: The child shell (and any other child processes or scripts) inherits the environments variables from the parent shell.
 
 ## 2.x - Basic shell navigation
 
