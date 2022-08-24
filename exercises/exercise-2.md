@@ -4,6 +4,7 @@ You will learn to:
 
 - Understand how the command line works
 - Navigate through files and directories using a shell
+- Use the clipboard
 
 :book: Check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section).
 
@@ -101,7 +102,7 @@ These first tasks are all about getting comfortable in your terminal, and execut
 :pencil2: List all `.txt` files in a the `files` directory with human-readable size references ordered
 by the last-modified date.
 
-Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` switches
+Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` parameters.
 
 :pencil2: Find the location of your `git` executable.
 
@@ -181,7 +182,6 @@ Notice that the variable has no value.
 
 ```bash
 $ MYVAR=TEST123
-
 $ export MYVAR
 ```
 
@@ -189,16 +189,104 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 :pencil2: Try opening up a child shell again and echo out the value of your new environment variable.
 
-:book: The child shell (and any other child processes or scripts) inherits the environments variables from the parent shell.
+:book: The child shell (and any other child processes or scripts) inherits the environment variables from the parent shell.
 
-## 2.x - Basic shell navigation
+## 2.4 - Using the clipboard in the terminal
 
-## 2.x - Signals
+:book: Most users are already familiar with the cut, copy and paste shortcuts, but here is a reminder anyway:
+
+| Command | Windows shortcut | Linux shortcut | macOS shortcut |
+|---------|---|---|---|
+| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>⌘+X</kbd> |
+| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>⌘+C</kbd> |
+| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>⌘+V</kbd> |
+
+:book: Depending on the OS and terminal settings, you may find that these shortcuts are not working as expected inside the terminal.
+
+:book: In Linux you may for instance see `^V` outputed if you try to paste some text into the terminal window. The short answer is that this is because the <kbd>CTRL</kbd> key has a special meaning in terminals, used to send signals to the terminal (terminate current program, etc.). They therefore sometimes collide with CTRL-based OS shortcuts.
+
+### Windows
+
+#### Git Bash in Windows
+
+:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you need to go in to the Options menu and select "Keys", then check the box for "CTRL+Shift+letter shortcuts".
+
+<img src="images/git-bash-clipboard.png" width="400">
+
+:book: You can now use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste.
+
+#### Windows Terminal
+
+:book: If you are using Windows Terminal you can use the normal <kbd>CTRL+C</kbd> and <kbd>CTRL+V</kbd> shortcuts.
+
+### Linux
+
+:book: If you are using the terminal application in Ubuntu you can use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste. You can also right click on text with the cursor to select it.
+
+### Mac
+
+:book: If you are using Mac you can use the normal <kbd>⌘+C</kbd> and <kbd>⌘+V</kbd> shortcuts.
+
+## 2.5 - Basic command line navigation
+
+:book: Moving around on the command line efficiently can save you a lot of time.
+
+:pencil2: Try out these navigation shortcuts:
+
+### Previous command
+
+Go to the previous command in the command history using arrow up and down:
+
+- <kbd>↑</kbd>
+- <kbd>↓</kbd>
+
+### Go to beginning / end
+
+Quickly jump to the beginning or end of the text:
+
+- <kbd>Ctrl + A</kbd> - Go to beginning
+- <kbd>Ctrl + E</kbd> - Go to end
+
+### Move backwards / forwards one word
+
+For a little more fine-grained movement, you can jump backwards or forwards one word at a time:
+
+- <kbd>Alt + B</kbd> - Go back one word
+- <kbd>Alt + F</kbd> - Go forward one word
+
+
+### Search command history
+
+Search backwards through command history:
+
+- <kbd>CTRL+R</kbd> and then type in a search term.
+  - Press shortcut again to go to next search result (backwards in command history).
+  - Press <kbd>Enter</kbd> to run command found in search.
+  - Use left and right arrow keys to edit command found in search.
+- <kbd>CTRL+G</kbd> to cancel search.
+
+### Clear the screen
+
+To clear the screen without clearing the current command:
+
+- <kbd>CTRL+L</kbd>
+
+## 2.6 - Terminating processes
+
+:book: Some times you need to terminate a running process if it hangs or if it does not respond to any user input. An example of this is a script with a endless loop. To terminate a running process we can send a signal to it. There are several differen types of signals that do different things, but the one we are interested in is called `SIGINT` (SIGnal INTerupt). There is a handy shortcut for sending this signal:
+
+- <kbd>CTRL+C</kbd> - Signals the current process to stop.
+
+:book: We can try out this shortcut using the `sleep` command, which suspends execution for an interval of time.
+
+:pencil2: Enter the command `sleep 30` to sleep for 30 seconds.
+
+:pencil2: While `sleep` is running, try stopping the process using <kbd>CTRL+C</kbd>.
 
 ---
 
 ## Summary
 
-In this exercise, we used some of the basic commands using our terminal and the bash shell. These are commonly used commands that we need to navigate and view the files of our system.Using a shell, you have the ability to automate your workflows by either creating useful scripts or gluing together different scripts and program in your system for maximum efficiency. In the next exercise, we will look into some of the things that make the shell effective - scripting.
+In this exercise, we used some of the basic commands using our terminal and the bash shell. These are commonly used commands that we need to navigate and view the files of our system. Using a shell, you have the ability to automate your workflows by either creating useful scripts or gluing together different scripts and program in your system for maximum efficiency. In the next exercise, we will look into some of the things that make the shell effective - scripting.
 
 ### [Go to exercise 3 :arrow_right:](./exercise-3.md)
