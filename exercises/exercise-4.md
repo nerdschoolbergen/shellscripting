@@ -5,9 +5,11 @@ You will learn to:
 - Use loops
 - Use if, else and elif blocks
 
-Create a number guessing game. The user should be asked to enter a number between 1 and 100. A random number should be generated, which the user will guess.
+## 4.1 Create a game
 
-If the user's guess is too low or too high, the script should print a descriptive message (E.g. `Your guess is too low`). If the user guesses the correct answer, the script should print out the number of tries, before exiting. 
+:pencil2: Create a number guessing game. The user should be asked to enter a number between 1 and 100. A random number should be generated, which the user will guess.
+
+:pencil2: If the user's guess is too low or too high, the script should print a descriptive message (E.g. `Your guess is too low`). If the user guesses the correct answer, the script should print out the number of tries, before exiting. 
 
 Here is some example execution:
 
