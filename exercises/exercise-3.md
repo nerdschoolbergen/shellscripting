@@ -27,7 +27,7 @@ You will learn to:
 :book: By default, `bash` will set the current working directory to the value of the global enviroment variable `$HOME`, which will vary by OS:
 
 - Linux: `/home/<username>`
-- macOS and Windows (Git Bash): `/Users/<username`
+- macOS and Windows (Git Bash): `/Users/<username>`
 
 :pencil2: To print the current working directory (which should be your home folder), use the `pwd` command.
 
@@ -143,9 +143,9 @@ Example output:
 
 :pencil2: Add execute permissions for everyone to the file `helloworld.sh`.
 
-:pencil2: Check that the permissions are correct using the `ls -l` command like we did previously. The correct result should be `rwxr--r--`.
+:pencil2: Check that the permissions are correct using the `ls -l` command. The correct result should be `rwxr--r--`.
 
-.pencil2: Try executing the script again using the `./ <filename>` syntax.
+:pencil2: Try executing the script again using the `./<filename>` syntax.
 
 :book: The script should now output:
 
