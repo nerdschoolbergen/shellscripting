@@ -251,8 +251,8 @@ Quickly jump to the beginning or end of the text:
 
 For a little more fine-grained movement, you can jump backwards or forwards one word at a time:
 
-- <kbd>Alt + B</kbd> - Go back one word
-- <kbd>Alt + F</kbd> - Go forward one word
+- <kbd>Alt + B</kbd> or <kbd>ALT + ←</kbd> - Go back one word
+- <kbd>Alt + F</kbd> or <kbd>ALT + →</kbd> - Go forward one word
 
 
 ### Search command history
