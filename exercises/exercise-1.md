@@ -120,13 +120,15 @@ Examples of some shells:
 
 ### 1.2.3 - Windows-users
 
-:book: Windows does not come preinstalled with Bash. The easiest way to install Bash is to install [Git for Windows](https://git-scm.com/download/win), which includes Bash.
+:book: Windows does not come preinstalled with Bash. The easiest way to install Bash is to install [Git for Windows](https://git-scm.com/download/win), which includes Bash ("Git Bash").
 
 :pencil2: Download and install [Git for Windows](https://git-scm.com/download/win) if you don't have it installed already.
 
-:book: Windows includes a default terminal (called conhost, or Console Host) which can be used with Bash, so strictly speaking you do not _need_ to install a terminal. However, conhost has a very poor user experience. We recommend that you install Microsoft's modern terminal called Windows Terminal.
+:book: Git Bash comes included with a terminal (called Mintty), so strictly speaking you do not _need_ to install a separate terminal application. However, Mintty has a very poor user experience. We recommend that you install Microsoft's modern terminal called Windows Terminal (requires Windows 10 or later) as well.
 
 :pencil2: (Optional) Follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
+
+:bulb: __Tip for experienced users:__ If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL. :warning: Be warned if you have any problems installing or setting up WSL, you are on your own. :warning:
 
 ---
 
