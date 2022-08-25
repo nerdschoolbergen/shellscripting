@@ -40,7 +40,7 @@ Later terminals replaced the printer with a screen, called video terminals:
 
 :book: Terminal emulators have other useful features like search, tabs, split screen, visual appearance customization and much more.
 
-:exclamation: Linux has a default terminal that come preinstalled in evry Linux distribution, depending on what distribution you use. MacOS has a default terminal aptly named "Terminal". Windows sadly (as of august 2022) does not yet come with a "proper" default terminal, but Microsoft recommends installing [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/).
+:exclamation: Linux has a default terminal that come preinstalled in every Linux distribution, depending on what distribution you use. MacOS has a default terminal aptly named "Terminal". Windows sadly (as of august 2022) does not yet come with a "proper" default terminal, but Microsoft recommends installing [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/).
 
 Examples of alternative terminal emulators:
 
