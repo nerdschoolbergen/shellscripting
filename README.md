@@ -32,6 +32,7 @@ You'll the Bash shell:
 - [Exercise 2](./exercises/exercise-2.md/) - Basics of the shell
 - [Exercise 2](./exercises/exercise-3.md/) - Scripting
 - [Exercise 4](./exercises/exercise-4.md/) - Number guessing game
+- [Exercise 5](./exercises/exercise-5.md/) - Using pipelines and redirects
 
 ## Helpful resources
 
@@ -45,10 +46,7 @@ You'll the Bash shell:
   - [2. Getting an overview](#2-getting-an-overview)
   - [3. Files and directories](#3-files-and-directories)
   - [4. Scripting basics](#4-scripting-basics)
-  - [6. Remote access](#6-remote-access)
-  - [7. How do I get help?](#7-how-do-i-get-help)
-  - [8. Nice to know about systems](#8-nice-to-know-about-systems)
-  - [9. Scripting](#9-scripting)
+  - [5. How do I get help?](#5-how-do-i-get-help)
 
 ## 1. Navigation
 - `ls`: what's in this directory? ("list")
@@ -83,25 +81,7 @@ You'll the Bash shell:
 - `if`
 - variables
 
-## 6. Remote access
-
-- `wget` : gets files over http
-- `curl` : gets files over http
-
-## 7. How do I get help? 
+## 5. How do I get help? 
 
 - Google is, as always, your friend
 - `man <command>` 
-
-## 8. Nice to know about systems
-
-- `PATH` : Your OS will search for executables in these locations (such as `java`, `python` and anything you might install yourself)
-- environment variables
-- dot-files : hidden files , e.g. `.bashrc`
-- `sudo` : perform tasks as super user (with great power comes great responsibility)
-
-## 9. Scripting
-
-- `#!` (shebang)
-- file permissions and file ownership
-- combining commands
