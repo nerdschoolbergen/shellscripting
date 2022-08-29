@@ -57,3 +57,5 @@ We can redirect to a file using the `>` or `>>` operator.
 - The `>>` operator will redirect the commands output to the file and append it to any existing content. 
 
 :pencil2: Using the `>` operator, create a new file consisting of unique and sorted Game of Thrones characters.
+
+### [:star: Go to Bonus exercise :arrow_right:](./bonus-1.md)
