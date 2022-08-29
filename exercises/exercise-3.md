@@ -77,11 +77,13 @@ echo "$MESSAGE"
 
 :pencil2: Try executing your `helloworld.sh` script this way.
 
-:book: The command will output an error:
+:book: The command should output an error. 
 
 ```bash
 bash: ./helloworld.sh: Permission denied
 ```
+
+:exclamation: If you are using Windows with barebone git bash, you shell might not honor best practice and the file may be executable from the get-go. This should not be a problem with WSL or any real Unix-like system. Try to follow along anyway, as permissions is an important aspect of working with files, that you will encounter when you are working in a non-emulated unix environment.
 
 :book: In order for a script to be executable, you need to set the _file permissons_ for the script file correctly.
 
@@ -174,7 +176,7 @@ Make a test that checks whether the path is a directory or a regular file. Print
 
 :pencil2: Change the current directory to the home directory using `cd ~`. (`~` is an alias of the path to the current user´s home directory)
 
-:pencil2: Create a new empty file in the home directory called `.bashrc`.
+:pencil2: Check to see if you have a file called `.bashrc` in your home directory. Create a new empty file in the home directory called `.bashrc` if it does not already exist.
 
 :exclamation: Notice that if you list the contents of the home directory the `.bashrc` file is hidden. This is because of the `.` prefix in the filename, which tells the OS to hide the file. To list hidden files using `ls` you can use the `-a` parameter.
 

@@ -134,7 +134,7 @@ KEY="Some other value"
 KEY=value1:value2
 ```
 
-:pencil2: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
+:bulb: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
 
 ```bash
 $ TEST=123
@@ -143,7 +143,7 @@ $
 
 Note that assiging a value to a variable will not generate any output.
 
-:pencil2: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
+:bulb: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
 
 ```bash
 $ echo $TEST

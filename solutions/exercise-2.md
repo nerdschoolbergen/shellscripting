@@ -10,6 +10,8 @@ This is done using the `ls` command. You can also pass parameters, in order to e
 ls -la
 ```
 
+## 2.1
+---
 *Print the path to the current working directory*
 
 Use the `pwd` command (Print working directory)
@@ -51,6 +53,9 @@ tail -f file1.txt
 ```
 *How do you exit from the live view of the file?* 
 Use `ctrl` + `c` to exit.
+
+## 2.3
+---
 
 *List the contents of your PATH variable*
 ```
