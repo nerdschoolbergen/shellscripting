@@ -7,7 +7,6 @@ You will learn to:
 - Tell the difference between terminals, consoles and shells
 - Install required software (if needed)
 - Open a terminal
-- Use the command line
 
 ## Required software and tools for this exercise
 
