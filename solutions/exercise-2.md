@@ -30,17 +30,17 @@ ls -la
 # Lists the files
 -ls -l 
 
-# Shows the files with Megabyte size references
---block-size=M
+# When used with the -l option, use human-readable units for file sizes
+-h
 
 # Sort by last modified date 
 -t 
 
 # Complete command
-ls -lt --block-size=M
+ls -lht
 
 # If you want to reverse the order, add the -r flag
-ls -ltr --block-size=M
+ls -lhtr
 ```
 
 *Find the location of your `git` executable.*
