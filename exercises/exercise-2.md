@@ -106,8 +106,6 @@ Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` p
 
 :pencil2: Find the location of your `git` executable.
 
-:pencil2: Listen to the tail end of the file `file1.txt` in the `files` folder.
-
 ## 2.3 - Environment variables and $PATH
 
 :book: How does the shell know what directories to search for to locate executable programs? Searching the whole filesystem would be very slow and inefficient. Therefore, to locate a program, the shell reads the locations from a special configuration value called the _PATH variable_, or `$PATH`.
