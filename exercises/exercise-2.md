@@ -1,88 +1,290 @@
-# Exercise 2 - Deploy via a script 
-
-:book: In this exercise you will write a script that will upload a set of files, containing a simple website to an existing server we have set up.
+# Exercise 2 - Basics of the shell
 
 You will learn to:
-  - Create your own script with functionality
- 
-## 2.1 Create your script
-### 2.1.1 Copying and verifying files
 
-:exclamation: Feel free to ask for help if you are stuck or something is unclear. Also, google is your friend :-)
+- Understand how the command line works
+- Navigate through files and directories using a shell
+- Use the clipboard
 
-:pencil2: Create a script that executes with `./script.sh` rather than `bash script.sh`. Make sure you're in the same directory as your script is in.
-Test this by executing the script from other directories and print the current working directory before and after the command.
-
-:pencil2: Move the `website` folder in the root of this git-repository in to your working directory, where you will be creating the script.
-  
-__Your script should execute the following steps in order to deploy a single website to a server__
-
-:pencil2: Upload all the files using a secure copying method (login information and address will be listed in the presentation) to a folder with your name on the server (See `REMOTE_FOLDER` in the template below).
-  
-:pencil2: SSH into the server and verify that the files are there (It might be enough to check if the `index.html` file is present).
-
-:pencil2: Print out some log messages after each step in your script.
-
-:book: Here is a template to get your started:
-
-```bash
-#!/bin/bash
-# - The above line is called "the shebang", and tells the shell what program to interpret the script with, when executed.
-# - Make sure to set permissions so that your user can execute the file (chmod u+x)
-
-# This is a magic oneliner that moves you to the dir of the script file:
-cd "$( dirname "${BASH_SOURCE[0]}" )"
-
-# Change the NAME variable to your name.
-NAME="YourName"
-REMOTE_FOLDER="/var/www/$NAME/"
-
-# " evaulates the contents
-# ' does not evaluate the contents inbetween. Test with 
-# param=hey
-# echo "$param"
-# echo '$param'
-
-# 1. Securely upload the folder to the remote remote server (to the REMOTE_FOLDER location)
-# 2. Securely login to the remote remote and verify that the index.html file is present in your REMOTE_FOLDER
-```
-
-
-
-### 2.1.2 Save backups
-
-If you run the script several times, you will try to copy files to an existing location. What we can do to fix this, is to create a mechanism for backing up the old files before deploying the new files. 
-
-:pencil2: Before you copy the files to the server, move the existing files on the server to the `/var/backup/<YourName>` folder, and give it a descriptive name (e.g. containing the date and time of the backup).
-
-You might end up with something like this `/var/backup/Marius/backup_
-
-When you upload the folder with your HTML-files, create a copy of the folder to the `/var/releases` folder, and give it a descriptive name (such as a name containing the date and the release number - E.g. `release-081819-1`, with end result: `/var/releases/<yourname>/release-081819-1`). You now have a set of previously released artifacts on the server.
-
-
-## :star: Bonus tasks for this exercise (optional)
-If you enjoyed working with this exercise, there is a lot more you can add to the script. Here are some suggestions, but you can add any feature you like (**Show us if you do something cool**).
-
-
-## 2.2.1 Cloning a git repository 
-Add an extra step to your deploy pipeline, where you start by cloning a remote git repository and use that as the website to upload to the server. If you are familiar with javascript build tools, try pulling a javascript webapp, build it, and upload it.
-
-### 2.2.2 `getopts`
-
-:book: Try to make your deploy-script use parameters with `getopts`! 
-- the parameters and their uses are: 
-  - `-c` Enables the steps to SSH into the server to check that the files are present
-  - `-s` Turns off any logging/printing to the console
-  - `-h` display usage
-- When you run the script it should look like this (when you invoke all the steps): 
-`./myscript.sh -cs`
-
-
-### 2.2.3 Zipping
-Zip the folder with your HTML-files before uploading them to the server. Unzip them on the server.
-
-:bulb: If you are working from a Macbook or a Linux machine, check out the `zip` utility. If you are working from a windows machine. If you are on windows, the simplest solution might be to download 7Zip, and use the `7z`-command. 
+:book: Check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section).
 
 ---
+
+## 2.1 - The command prompt
+
+:book: When you start a shell, a prompt appears on the screen where the user can type text input. This prompt is also called a _command line_ or _commmand prompt_. On most systems the prompt has a `$` to denote where the command prompt is on the screen:
+
+```bash
+$
+```
+
+:book: Pressing <kbd>Enter</kbd> will tell the shell to execute the input. If the input generates some output, it's displayed under the command line:
+
+```bash
+$ ls
+<output is displayed here>
+```
+
+## 2.2 - Commands and programs
+
+:book: On Unix-like operating systems (like Linux and macOS) the commands you can execute using the shell (like `ls`, `mkdir`, `cd`, etc.) are small programs, not a part of the shell itself. What commands are available depends on the OS and what the user has installed.
+
+:book: To make things easier, Unix-like OS-es come with a standard set of programs or commands called [POSIX](https://itsfoss.com/posix/) commands. These commands are located in a [standard set of folders](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard):
+
+- `/bin` - Essential commands like `ls`, `cp`, `rm`, in addition to shell programs like `bash`.
+- `/usr/bin` - Non-essential commands like `find`, `grep`, `head`, `tail`.
+
+:book: In addition to the folders above, there are standard folders for system-level commands (that perform tasks like formatting disks and configuring the OS):
+
+- `/sbin` - Essential system commands like `ping`, `shutdown`, `mount`.
+- `/usr/sbin` - Non-essential system commands like `chmod`, `tcpdump` and `netstat`.
+
+[Here](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf) is a list of standard commands.
+
+### 2.2.1 - Your first command
+
+:pencil2: Start by opening your terminal application.
+
+:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh` (not `bash`). This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
+
+:pencil2: Try listing the contents of these folders using the `ls <foldername>` command to get a list of commands.
+
+:book: The shell in it self is also a command, like other commands :)
+
+:pencil2: Try starting a new shell process by typing `bash` and then pressing <kbd>Enter</kbd>:
+
+```bash
+$ bash
+...
+$
+```
+
+:book: Note that the result is a new command prompt for a new shell. This new shell is a child process of the first shell. To exit the child shell process and return to the first shell, use the `exit` command:
+
+```bash
+$ exit
+exit
+$
+```
+
+### 2.2.1 - General syntax for commands
+
+:book: All commands in Unix-like systems follow a basic syntax:
+
+- `<command>`
+- `<command> <argument>`
+- `<command> -<parameter>`
+- `<command> -<parameter> <argument>`
+
+An example:
+
+`cp -R dir1/ dir2/` - copy all files and subdirectories from `dir1` into `dir2`
+
+- `cp` is the command
+- `-R` is a parameter - in the context of `ls` it means copy recursively (copy all files and subfolders).
+- `folder1/` is a argument - In the context of `ls` it's the source directory
+- `folder2/` is a argument - In the context of `ls` it's the target folder
+
+Parameters are always prefixed with a `-` (sometimes they have an alternative "long" human-readable form style syntax with a `--` prefix, like `--count` instead of `-c`).
+
+What parameters and arguments a command takes, and if they are mandatory or not depends on the command.
+
+:pencil2: The `ls` command has an optional parameter called `-l`, which changes the output of the command to a more detailed "long form". Try using this parameter to list out the contents of a directory.
+
+## 2.2 - Files and directories
+
+These first tasks are all about getting comfortable in your terminal, and execute some common commands.
+
+:pencil2: Print the path to the current working directory
+
+:pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
+
+:pencil2: List all `.txt` files in a the `files` directory with human-readable size references ordered
+by the last-modified date.
+
+Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` parameters.
+
+:pencil2: Find the location of your `git` executable.
+
+:pencil2: Listen to the tail end of the file `file1.txt` in the `files` folder.
+
+## 2.3 - Environment variables and $PATH
+
+:book: How does the shell know what directories to search for to locate executable programs? Searching the whole filesystem would be very slow and inefficient. Therefore, to locate a program, the shell reads the locations from a special configuration value called the _PATH variable_, or `$PATH`.
+
+:book: The value of `$PATH` consists of one or more directories separated by a colon:
+
+`/some/dir:/another/dir:/a/third/dir`
+
+:book: The shell searches through all directories in the `$PATH` to locate the program you are trying to execute. If you have two executable files sharing the same name located in two different directories, the shell will run the file that is in the directory that comes first in the `$PATH`.
+
+:pencil2: List the contents of your PATH variable using the `echo` command.
+
+:book: Note that you have several different directories in your `$PATH` in addition to the standard directories we mentioned earlier.
+
+### 2.3.1 - Shell variables
+
+:book: Shell variables are variables with name and a value used by the shell and other programs.
+
+Variables have the following format:
+
+```bash
+KEY=value
+KEY="Some other value"
+KEY=value1:value2
+```
+
+:bulb: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
+
+```bash
+$ TEST=123
+$
+```
+
+Note that assiging a value to a variable will not generate any output.
+
+:bulb: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
+
+```bash
+$ echo $TEST
+123
+```
+
+:pencil2: Try assigning a new value to the `TEST`-variable, and show the new value.
+
+Note that overwriting variables is no different than creating new variables.
+
+:pencil2: Try closing the terminal, and open it again. Then try echoing out the value of `TEST` again.
+
+:question: The `TEST` variable now has no value. Why is this?
+
+:book: Shell variables will be lost when the shell process is exited.
+
+:question: But if `$PATH` is a shell variable and variable values are lost when exiting the shell, how is `$PATH` defined each time you open a new shell?
+
+:book: When the `bash` shell starts up, it runs a set of special configuration scripts which defines the value of `$PATH` for every user on the computer.
+
+:book: Each user on the computer can override any setting in the global configuration by creating a file called `.bashrc` in the user's home folder. In some OSes this file is already present by default. This file can be used to define or redefine any variable that the user wants to be set at startup, for example the `$PATH`. This is very useful for scripting, as we will see in the next exercise.
+
+### 2.3.2 - Environment variables
+
+:book: Environment variables are variables that are available to all subprocesses of a shell, not just the current shell.
+
+:pencil2: Try defining a shell variable and open up a new child shell using the `bash` command. Then echoing out the value of the shell variable you previously defined in the parent shell.
+
+Notice that the variable has no value.
+
+:pencil2: Exit out of the child shell using `exit`.
+
+:pencil2: To create a environment variable from a shell variable, first define the variable and then use the `export` command:
+
+```bash
+$ MYVAR=TEST123
+$ export MYVAR
+```
+
+You can do this in one line as well: `export MYVAR=1TEST123`.
+
+:pencil2: Try opening up a child shell again and echo out the value of your new environment variable.
+
+:book: The child shell (and any other child processes or scripts) inherits the environment variables from the parent shell.
+
+## 2.4 - Using the clipboard in the terminal
+
+:book: Most users are already familiar with the cut, copy and paste shortcuts, but here is a reminder anyway:
+
+| Command | Windows shortcut | Linux shortcut | macOS shortcut |
+|---------|---|---|---|
+| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>⌘+X</kbd> |
+| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>⌘+C</kbd> |
+| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>⌘+V</kbd> |
+
+:book: Depending on the OS and terminal settings, you may find that these shortcuts are not working as expected inside the terminal.
+
+:book: In Linux you may for instance see `^V` outputed if you try to paste some text into the terminal window. The short answer is that this is because the <kbd>CTRL</kbd> key has a special meaning in terminals, used to send signals to the terminal (terminate current program, etc.). They therefore sometimes collide with CTRL-based OS shortcuts.
+
+### Windows
+
+#### Git Bash in Windows
+
+:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you need to go in to the Options menu and select "Keys", then check the box for "CTRL+Shift+letter shortcuts".
+
+<img src="images/git-bash-clipboard.png" width="400">
+
+:book: You can now use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste.
+
+#### Windows Terminal
+
+:book: If you are using Windows Terminal you can use the normal <kbd>CTRL+C</kbd> and <kbd>CTRL+V</kbd> shortcuts.
+
+### Linux
+
+:book: If you are using the terminal application in Ubuntu you can use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste. You can also right click on text with the cursor to select it.
+
+### Mac
+
+:book: If you are using Mac you can use the normal <kbd>⌘+C</kbd> and <kbd>⌘+V</kbd> shortcuts.
+
+## 2.5 - Basic command line navigation
+
+:book: Moving around on the command line efficiently can save you a lot of time.
+
+:pencil2: Try out these navigation shortcuts:
+
+### Previous command
+
+Go to the previous command in the command history using arrow up and down:
+
+- <kbd>↑</kbd>
+- <kbd>↓</kbd>
+
+### Go to beginning / end
+
+Quickly jump to the beginning or end of the text:
+
+- <kbd>Ctrl + A</kbd> - Go to beginning
+- <kbd>Ctrl + E</kbd> - Go to end
+
+### Move backwards / forwards one word
+
+For a little more fine-grained movement, you can jump backwards or forwards one word at a time:
+
+- <kbd>Alt + B</kbd> or <kbd>ALT + ←</kbd> - Go back one word
+- <kbd>Alt + F</kbd> or <kbd>ALT + →</kbd> - Go forward one word
+
+
+### Search command history
+
+Search backwards through command history:
+
+- <kbd>CTRL+R</kbd> and then type in a search term.
+  - Press shortcut again to go to next search result (backwards in command history).
+  - Press <kbd>Enter</kbd> to run command found in search.
+  - Use left and right arrow keys to edit command found in search.
+- <kbd>CTRL+G</kbd> to cancel search.
+
+### Clear the screen
+
+To clear the screen without clearing the current command:
+
+- <kbd>CTRL+L</kbd>
+
+## 2.6 - Terminating processes
+
+:book: Some times you need to terminate a running process if it hangs or if it does not respond to any user input. An example of this is a script with a endless loop. To terminate a running process we can send a signal to it. There are several differen types of signals that do different things, but the one we are interested in is called `SIGINT` (SIGnal INTerupt). There is a handy shortcut for sending this signal:
+
+- <kbd>CTRL+C</kbd> - Signals the current process to stop.
+
+:book: We can try out this shortcut using the `sleep` command, which suspends execution for an interval of time.
+
+:pencil2: Enter the command `sleep 30` to sleep for 30 seconds.
+
+:pencil2: While `sleep` is running, try stopping the process using <kbd>CTRL+C</kbd>.
+
+---
+
+## Summary
+
+In this exercise, we used some of the basic commands using our terminal and the bash shell. These are commonly used commands that we need to navigate and view the files of our system. Using a shell, you have the ability to automate your workflows by either creating useful scripts or gluing together different scripts and program in your system for maximum efficiency. In the next exercise, we will look into some of the things that make the shell effective - scripting.
 
 ### [Go to exercise 3 :arrow_right:](./exercise-3.md)
