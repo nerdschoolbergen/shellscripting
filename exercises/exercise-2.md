@@ -5,6 +5,8 @@ You will learn to:
 - Understand how the command line works
 - Navigate through files and directories using a shell
 - Use the clipboard
+- Understand what commands are
+- Understand how variables work
 
 :book: Check out the [main page](../README.md) where we've listed some of the most commonly used commands (Helpful resources section).
 
