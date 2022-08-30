@@ -1,6 +1,6 @@
 # Exercise 4 - Number guessing game
 
-You will learn to:
+You will practice:
 
 - Use loops
 - Use if, else and elif blocks

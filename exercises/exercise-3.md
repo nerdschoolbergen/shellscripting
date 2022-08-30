@@ -113,7 +113,7 @@ Hello World!
 
 :book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
-:pencil2: Use a for loop to print out the first few lines of each file in a directory. Try to do this both as a script and as a one-liner in the shell.
+:pencil2: Make a script that uses a for loop to print out the first few lines of each file in a directory.
 
 :pencil2: Make a variable containing the path of a directory or a file that exists in your filesystem.
 Make a test that checks whether the path is a directory or a regular file. Print `Directory` if the path is a directory, or `File` if the path is a regular file. Create a script that you can run to check the status of the path currently stored in your variable (e.g. `./filecheck.sh`).
