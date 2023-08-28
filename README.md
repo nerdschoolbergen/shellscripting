@@ -12,7 +12,7 @@ some tips on useful tools and exercises. Happy hacking!
 
 ## What you need
 
-You'll the Bash shell:
+You'll only need the Bash shell:
 
 * Linux/MacOS: Bash is already included
 * Windows: Install [Git for Windows](https://git-scm.com/download/win) - Remember to opt in for Git Bash when installing
@@ -24,7 +24,7 @@ You'll the Bash shell:
 * Start by opening [exercise 1](./exercises/exercise-1.md/).
 * Remember to ask an instructor if you're stuck.
 
-> :exclamation: Hottest tip: Google is your friend. You will need to google alot as you dive into the exercises!
+> :exclamation: Hottest tip: Google is your friend. You will need to google a lot as you dive into the exercises!
 
 ## Exercises
 
