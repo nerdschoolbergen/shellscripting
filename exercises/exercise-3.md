@@ -1,3 +1,5 @@
+<!-- TODO: Move PATH introduction from 2.3 to this exercise -->
+
 # Exercise 3 - Scripting
 
 You will learn to:

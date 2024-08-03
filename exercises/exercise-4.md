@@ -1,3 +1,5 @@
+<!-- TODO: Move after exercise 5? This one is far more complex and less useful for everyday use -->
+
 # Exercise 4 - Number guessing game
 
 You will practice:
