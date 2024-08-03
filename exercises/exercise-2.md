@@ -43,7 +43,9 @@ $ ls
 
 :pencil2: Try listing the contents of a folder using the `ls <foldername>` command.
 
-:book: The shell in it self is also a command, like other commands :)
+
+<!-- TODO: Move shell in shell stuff to bonus? -->
+:book: The shell in itself is also a command, like other commands :)
 
 :pencil2: Try starting a new shell process by typing `bash` and then pressing <kbd>Enter</kbd>:
 
