@@ -31,8 +31,9 @@ You'll only need the Bash shell:
 - [Exercise 1](./exercises/exercise-1.md/) - Getting started
 - [Exercise 2](./exercises/exercise-2.md/) - Basics of the shell
 - [Exercise 2](./exercises/exercise-3.md/) - Scripting
-- [Exercise 4](./exercises/exercise-4.md/) - Number guessing game
-- [Exercise 5](./exercises/exercise-5.md/) - Using pipelines and redirects
+- [Exercise 4](./exercises/exercise-4.md/) - Using pipelines and redirects
+- [Exercise 5](./exercises/exercise-5.md/) - Number guessing game
+
 
 ## Helpful resources
 
