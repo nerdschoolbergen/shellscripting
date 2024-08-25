@@ -63,7 +63,7 @@ exit
 $
 ```
 
-### 2.2.1 - General syntax for commands
+### 2.2.2 - General syntax for commands
 
 :book: All commands in Unix-like systems follow a basic syntax:
 
@@ -95,16 +95,14 @@ These first tasks are all about getting comfortable in your terminal, and execut
 
 :pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
 
-:pencil2: Navigate to your local clone of this repository. <!-- Too hard? -->
+:pencil2: Navigate to your local clone of this repository (hint: use the "code"-button in the GitHub-repository for this workshop, if you haven't already, to get the url)
 
 :pencil2: List all `.txt` files in the `files` directory with human-readable size references ordered
 by the last-modified date.
 
 Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` parameters.
 
-:pencil2: Find a specific file in the files directory tree. <!-- TODO: Add appropriate files to the files directory, preferably under some subdirectories -->
-
-:pencil2: Find the location of your `git` executable. <!-- TODO: Move to PATH section -->
+:pencil2: Locate the file called iterm.png by using the `find` command.
 
 ## 2.4 - Environment variables and $PATH
 
