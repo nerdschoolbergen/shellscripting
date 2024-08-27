@@ -39,15 +39,9 @@ Later terminals replaced the printer with a screen, called video terminals:
 
 :book: Terminal emulators have other useful features like search, tabs, split screen, visual appearance customization and much more.
 
-:exclamation: Linux has a default terminal that come preinstalled in every Linux distribution, depending on what distribution you use. MacOS has a default terminal aptly named "Terminal". Windows sadly (as of august 2022) does not yet come with a "proper" default terminal, but Microsoft recommends installing [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/).
+:exclamation: Linux has a default terminal that come preinstalled in every Linux distribution, depending on what distribution you use. MacOS has a default terminal aptly named "Terminal". Windows 11 and later come with [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/) installed as the default terminal.
 
 Examples of alternative terminal emulators:
-
-##### Windows Terminal (Windows)
-
-<img src="images/windows_terminal.jpg" width="600">
-
-[Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
 
 ##### iTerm (macOS)
 
@@ -123,9 +117,9 @@ Examples of some shells:
 
 :pencil2: Download and install [Git for Windows](https://git-scm.com/download/win) if you don't have it installed already.
 
-:book: Git Bash comes included with a terminal (called Mintty), so strictly speaking you do not _need_ to install a separate terminal application. However, Mintty has a very poor user experience. We recommend that you install Microsoft's modern terminal called Windows Terminal (requires Windows 10 or later) as well.
+:book: Git Bash comes included with a terminal (called Mintty), so strictly speaking you do not _need_ to install a separate terminal application. However, Mintty has a very poor user experience. We recommend that you use Microsoft's modern terminal called Windows Terminal. It comes preinstalled in Windows 11 or later.
 
-:pencil2: (Optional) Follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
+:pencil2: (Optional) If you are on Windows 10 or earlier, follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
 
 :bulb: __Tip for experienced users:__ If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL. :warning: Be warned if you have any problems installing or setting up WSL, you are on your own. :warning:
 
